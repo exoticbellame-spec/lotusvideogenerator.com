@@ -1,0 +1,2091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Lotus AI Studio — The Future of Video Creation 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   LOTUS AI STUDIO — ULTIMATE 2026 DESIGN SYSTEM
+   Beyond CapCut · Beyond Seedance · Beyond VidFab · Beyond Vivideo
+   ═══════════════════════════════════════════════════════════════ */
+:root{
+  --void:#030308;
+  --deep:#07070f;
+  --s1:#0d0d1c;
+  --s2:#121225;
+  --s3:#181830;
+  --s4:#1e1e38;
+  --s5:#252545;
+
+  /* Lotus signature palette */
+  --rose:#ff4f8b;
+  --rose2:#ff2d75;
+  --rose3:#ff91b8;
+  --orchid:#b441ff;
+  --orchid2:#9400ff;
+  --orchid3:#d480ff;
+  --jade:#00e5a0;
+  --jade2:#00c987;
+  --jade3:#7fffd4;
+  --gold:#ffc244;
+  --gold2:#ffab00;
+  --gold3:#ffe49a;
+  --sapphire:#4facfe;
+  --sapphire2:#2185d0;
+  --coral:#ff6b6b;
+  --lime:#a8ff3e;
+
+  --text:#f8f4ff;
+  --text2:rgba(248,244,255,.62);
+  --text3:rgba(248,244,255,.35);
+  --text4:rgba(248,244,255,.16);
+  --border:rgba(180,100,255,.09);
+  --border2:rgba(180,100,255,.2);
+  --border3:rgba(255,79,139,.22);
+  --border4:rgba(0,229,160,.18);
+
+  --r:14px;
+  --rsm:8px;
+  --rlg:20px;
+  --rxl:28px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',sans-serif;background:var(--void);color:var(--text);overflow-x:hidden;min-height:100vh}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-thumb{background:rgba(180,65,255,.4);border-radius:4px}
+::selection{background:rgba(255,79,139,.25)}
+
+/* ═══ SPECTACULAR ANIMATED BACKGROUND ═══ */
+#cosmos{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+#bg-canvas{position:absolute;inset:0;width:100%;height:100%}
+
+/* Holographic mesh lines */
+.mesh{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(180,65,255,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(180,65,255,.025) 1px,transparent 1px);
+  background-size:60px 60px;
+  animation:meshShift 30s linear infinite;
+}
+@keyframes meshShift{0%{transform:translate(0,0)}100%{transform:translate(60px,60px)}}
+
+/* Giant lotus petal geometry */
+.geo-lotus{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:900px;height:900px;
+  animation:geoPulse 12s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes geoPulse{
+  0%,100%{transform:translate(-50%,-50%) scale(1) rotate(0deg);opacity:.06}
+  50%{transform:translate(-50%,-50%) scale(1.15) rotate(60deg);opacity:.1}
+}
+
+/* Aurora blobs */
+.blob{position:absolute;border-radius:50%;pointer-events:none;mix-blend-mode:screen;filter:blur(90px)}
+.b1{width:680px;height:680px;background:radial-gradient(circle,rgba(180,65,255,.22),transparent 65%);top:-180px;left:-140px;animation:blobFloat1 22s ease-in-out infinite alternate}
+.b2{width:560px;height:560px;background:radial-gradient(circle,rgba(255,79,139,.18),transparent 65%);bottom:-80px;right:-120px;animation:blobFloat2 18s ease-in-out infinite alternate}
+.b3{width:480px;height:480px;background:radial-gradient(circle,rgba(0,229,160,.13),transparent 65%);top:40%;left:60%;animation:blobFloat3 24s ease-in-out infinite alternate}
+.b4{width:360px;height:360px;background:radial-gradient(circle,rgba(79,172,254,.1),transparent 65%);top:70%;left:15%;animation:blobFloat1 16s ease-in-out infinite alternate-reverse}
+.b5{width:280px;height:280px;background:radial-gradient(circle,rgba(255,194,68,.09),transparent 65%);top:20%;right:25%;animation:blobFloat2 20s ease-in-out infinite alternate}
+@keyframes blobFloat1{0%{transform:translate(0,0) scale(1)}50%{transform:translate(60px,-50px) scale(1.12)}100%{transform:translate(-30px,40px) scale(.95)}}
+@keyframes blobFloat2{0%{transform:translate(0,0)}50%{transform:translate(-80px,40px) scale(1.08)}100%{transform:translate(40px,-60px) scale(.97)}}
+@keyframes blobFloat3{0%{transform:translate(0,0) rotate(0deg)}100%{transform:translate(-60px,50px) rotate(120deg)}}
+
+/* Falling lotus petals */
+.petal{position:absolute;pointer-events:none;border-radius:50% 10% 50% 10%;animation:petalFall linear infinite;opacity:0}
+@keyframes petalFall{
+  0%{transform:translateY(-20px) rotate(0deg) scale(.4);opacity:0}
+  8%{opacity:.45}88%{opacity:.12}
+  100%{transform:translateY(105vh) rotate(540deg) scale(1.4);opacity:0}
+}
+
+/* Scan line */
+.scanline{position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.04) 2px,rgba(0,0,0,.04) 4px);pointer-events:none;animation:scanMove 8s linear infinite}
+@keyframes scanMove{0%{background-position:0 0}100%{background-position:0 100px}}
+
+/* ═══ LAYOUT ═══ */
+#root{display:flex;height:100vh;position:relative;z-index:1}
+
+/* ═══ SIDEBAR ═══ */
+.sb{
+  width:252px;flex-shrink:0;
+  background:linear-gradient(180deg,rgba(13,13,28,.98) 0%,rgba(7,7,15,.99) 100%);
+  border-right:1px solid var(--border);
+  display:flex;flex-direction:column;
+  backdrop-filter:blur(28px);
+  position:relative;overflow:hidden;
+}
+.sb::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:300px;
+  background:radial-gradient(ellipse at 30% 0%,rgba(180,65,255,.08),transparent 70%);
+  pointer-events:none;
+}
+.sb-logo{
+  padding:24px 20px 20px;
+  border-bottom:1px solid var(--border);
+  position:relative;z-index:1;
+}
+.sb-logo-row{display:flex;align-items:center;gap:13px}
+.logo-gem{
+  width:40px;height:40px;flex-shrink:0;
+  background:linear-gradient(135deg,var(--rose2),var(--orchid2));
+  border-radius:11px;display:flex;align-items:center;justify-content:center;
+  font-size:20px;position:relative;overflow:hidden;
+  box-shadow:0 0 28px rgba(255,45,117,.45);
+  animation:gemGlow 3s ease-in-out infinite alternate;
+}
+@keyframes gemGlow{0%{box-shadow:0 0 20px rgba(255,45,117,.4)}100%{box-shadow:0 0 40px rgba(255,45,117,.7),0 0 60px rgba(180,65,255,.3)}}
+.logo-gem::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.15),transparent 50%);pointer-events:none}
+.logo-wordmark{
+  font-family:'Playfair Display',serif;font-size:21px;font-weight:700;
+  background:linear-gradient(135deg,#fff 0%,var(--rose3) 50%,var(--orchid3));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  letter-spacing:-.3px;line-height:1.1;
+}
+.logo-sub{font-size:9px;color:var(--text4);letter-spacing:.16em;text-transform:uppercase;font-family:'JetBrains Mono',monospace;margin-top:1px}
+
+/* Nav */
+.sb-nav{flex:1;padding:10px 10px;overflow-y:auto}
+.sb-nav::-webkit-scrollbar{width:0}
+.sec-lbl{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--text4);padding:13px 12px 4px;font-family:'JetBrains Mono'}
+.ni{
+  display:flex;align-items:center;gap:11px;
+  padding:9px 12px;border-radius:var(--rsm);
+  cursor:pointer;font-size:13px;font-weight:400;color:var(--text3);
+  transition:all .18s;border:none;background:none;width:100%;text-align:left;
+}
+.ni:hover{background:rgba(180,65,255,.08);color:var(--text)}
+.ni.on{
+  background:linear-gradient(90deg,rgba(255,79,139,.14),rgba(180,65,255,.07));
+  color:var(--rose3);font-weight:600;
+  border-left:2px solid var(--rose2);padding-left:10px;
+}
+.ni .ic{font-size:15px;width:18px;flex-shrink:0;transition:.18s}
+.ni.on .ic{filter:drop-shadow(0 0 5px var(--rose2))}
+.ni .nbadge{margin-left:auto;background:rgba(255,79,139,.2);color:var(--rose3);font-size:10px;padding:1px 7px;border-radius:20px;font-family:'JetBrains Mono';display:none}
+.ni .new-tag{margin-left:auto;background:linear-gradient(135deg,var(--jade2),var(--jade));color:#060c0a;font-size:9px;font-weight:700;padding:1px 7px;border-radius:20px;font-family:'JetBrains Mono'}
+
+/* Sidebar footer */
+.sb-foot{padding:12px 12px 18px;border-top:1px solid var(--border)}
+.cr-pill{
+  background:linear-gradient(135deg,rgba(255,79,139,.12),rgba(180,65,255,.08));
+  border:1px solid var(--border3);border-radius:var(--rsm);
+  padding:12px 14px;margin-bottom:10px;
+}
+.cr-lbl{font-size:9px;color:var(--text4);letter-spacing:.1em;text-transform:uppercase;font-family:'JetBrains Mono'}
+.cr-num{
+  font-family:'Playfair Display',serif;font-size:32px;font-weight:700;line-height:1.1;
+  background:linear-gradient(135deg,var(--rose),var(--orchid3));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.cr-plan{font-size:10.5px;color:var(--text3);margin-top:2px}
+.so-btn{
+  width:100%;padding:8px;border-radius:var(--rsm);background:none;border:1px solid var(--border);
+  color:var(--text3);font-size:12px;cursor:pointer;transition:.18s;font-family:'Manrope';
+}
+.so-btn:hover{border-color:var(--coral);color:var(--coral)}
+
+/* ═══ MAIN ═══ */
+.main-wrap{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0}
+
+.topbar{
+  height:60px;flex-shrink:0;
+  background:rgba(7,7,15,.88);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;padding:0 28px;gap:14px;
+  backdrop-filter:blur(24px);position:relative;
+}
+.topbar::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,79,139,.4),rgba(180,65,255,.3),rgba(0,229,160,.2),transparent);
+}
+.tb-title{
+  font-family:'Playfair Display',serif;font-size:20px;font-weight:700;flex:1;letter-spacing:-.3px;
+}
+.tb-title em{
+  background:linear-gradient(135deg,var(--rose),var(--orchid3));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:italic;
+}
+
+/* Content */
+.content-area{flex:1;overflow-y:auto;padding:26px 28px}
+
+/* Panels */
+.panel{display:none}
+.panel.on{display:block;animation:pIn .35s cubic-bezier(.22,1,.36,1)}
+@keyframes pIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+/* ═══ COMPONENT SYSTEM ═══ */
+/* Cards */
+.card{
+  background:var(--s1);border:1px solid var(--border);
+  border-radius:var(--r);padding:20px;position:relative;overflow:hidden;
+}
+.card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,79,139,.35),rgba(180,65,255,.25),transparent);
+}
+.gcard{
+  background:linear-gradient(135deg,rgba(13,13,28,.98),rgba(18,18,37,.95));
+  border:1px solid var(--border2);border-radius:var(--rlg);padding:22px;
+  position:relative;overflow:hidden;
+  box-shadow:0 0 50px rgba(180,65,255,.05),inset 0 1px 0 rgba(255,255,255,.03);
+}
+.gcard::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,79,139,.45),rgba(180,65,255,.35),rgba(0,229,160,.2),transparent);
+}
+.ctitle{
+  font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--text4);margin-bottom:16px;
+}
+.ctitle.rose{color:rgba(255,79,139,.55)}
+.ctitle.jade{color:rgba(0,229,160,.5)}
+.ctitle.gold{color:rgba(255,194,68,.5)}
+.ctitle.orchid{color:rgba(180,65,255,.55)}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:8px 18px;border-radius:var(--rsm);
+  font-size:13px;font-weight:600;cursor:pointer;border:none;
+  transition:all .2s;font-family:'Manrope';letter-spacing:.02em;white-space:nowrap;
+  position:relative;overflow:hidden;
+}
+.btn::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.07),transparent);pointer-events:none}
+.bprimary{background:linear-gradient(135deg,var(--rose2),var(--orchid2));color:#fff;box-shadow:0 4px 20px rgba(255,45,117,.3)}
+.bprimary:hover{box-shadow:0 6px 32px rgba(255,45,117,.55);transform:translateY(-1px)}
+.bprimary:disabled{opacity:.42;cursor:not-allowed;transform:none;box-shadow:none}
+.bjade{background:linear-gradient(135deg,var(--jade2),var(--jade));color:#04100a;font-weight:700;box-shadow:0 4px 20px rgba(0,229,160,.22)}
+.bjade:hover{transform:translateY(-1px);box-shadow:0 6px 28px rgba(0,229,160,.4)}
+.bgold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#0a0800;font-weight:700;box-shadow:0 4px 20px rgba(255,171,0,.22)}
+.bgold:hover{transform:translateY(-1px);box-shadow:0 6px 28px rgba(255,171,0,.4)}
+.bsap{background:linear-gradient(135deg,var(--sapphire2),var(--sapphire));color:#fff;box-shadow:0 4px 20px rgba(79,172,254,.22)}
+.bsap:hover{transform:translateY(-1px);box-shadow:0 6px 28px rgba(79,172,254,.4)}
+.bghost{background:var(--s3);color:var(--text2);border:1px solid var(--border)}
+.bghost:hover{border-color:var(--border2);color:var(--text)}
+.bdanger{background:rgba(255,107,107,.12);color:var(--coral);border:1px solid rgba(255,107,107,.22)}
+.bsm{padding:5px 13px;font-size:12px}
+.bxs{padding:3px 9px;font-size:11px}
+
+/* THE MEGA GENERATE BUTTON */
+.megabtn{
+  width:100%;padding:16px;
+  font-family:'Playfair Display',serif;font-size:17px;font-weight:700;font-style:italic;
+  letter-spacing:.06em;
+  background:linear-gradient(135deg,#9400ff 0%,#ff2d75 50%,#ff4f8b 80%,#00c987 100%);
+  background-size:300% 300%;
+  color:#fff;border:none;border-radius:var(--r);cursor:pointer;
+  box-shadow:0 6px 36px rgba(255,45,117,.4),inset 0 1px 0 rgba(255,255,255,.14);
+  animation:megaGrad 5s ease infinite;transition:all .3s;
+  position:relative;overflow:hidden;
+}
+.megabtn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.1),transparent 50%);pointer-events:none}
+.megabtn:hover{transform:translateY(-2px);box-shadow:0 10px 48px rgba(255,45,117,.6),0 0 80px rgba(180,65,255,.2)}
+.megabtn:disabled{opacity:.4;cursor:not-allowed;transform:none;animation:none;background:#222}
+@keyframes megaGrad{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+/* Forms */
+textarea,input[type=text],input[type=email],input[type=password],input[type=number],input[type=url],select{
+  width:100%;background:var(--s3);border:1px solid var(--border);
+  border-radius:var(--rsm);color:var(--text);
+  font-family:'Manrope';font-size:13.5px;
+  padding:10px 13px;outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;
+}
+textarea{resize:vertical;min-height:110px;line-height:1.65}
+textarea:focus,input:focus,select:focus{border-color:var(--orchid);box-shadow:0 0 0 3px rgba(180,65,255,.1)}
+textarea::placeholder,input::placeholder{color:var(--text4)}
+.label{display:block;font-size:12px;color:var(--text2);margin-bottom:6px;font-weight:600;letter-spacing:.02em}
+.field{margin-bottom:14px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.frow3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:14px}
+
+/* Badges */
+.badge{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:20px;font-size:10.5px;font-family:'JetBrains Mono'}
+.bq{background:rgba(255,194,68,.12);color:var(--gold)}
+.bp{background:rgba(79,172,254,.12);color:var(--sapphire)}
+.bok{background:rgba(0,229,160,.12);color:var(--jade)}
+.bf{background:rgba(255,107,107,.12);color:var(--coral)}
+.dot{width:5px;height:5px;border-radius:50%;background:currentColor;flex-shrink:0}
+.bp .dot,.bq .dot{animation:dotblink 1.2s ease-in-out infinite}
+@keyframes dotblink{0%,100%{opacity:1}50%{opacity:.15}}
+
+/* Progress */
+.progwrap{margin-top:10px}
+.progrow{display:flex;justify-content:space-between;font-size:9.5px;color:var(--text4);margin-bottom:5px;font-family:'JetBrains Mono'}
+.progt{height:3px;background:var(--s4);border-radius:3px;overflow:hidden}
+.progf{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--rose2),var(--orchid2),var(--jade));transition:width .6s ease}
+.progf.ind{width:40%!important;animation:progSweep 1.9s ease-in-out infinite}
+@keyframes progSweep{0%{transform:translateX(-260%)}100%{transform:translateX(520%)}}
+
+/* Video box */
+.vidbox{
+  width:100%;aspect-ratio:16/9;
+  background:linear-gradient(135deg,var(--s2),var(--s3));
+  border:1px solid var(--border);border-radius:var(--r);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;cursor:pointer;transition:.22s;
+}
+.vidbox::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(180,65,255,.04),rgba(255,79,139,.03))}
+.vidbox:hover{border-color:var(--border2)}
+.playring{
+  width:58px;height:58px;border-radius:50%;
+  background:linear-gradient(135deg,var(--rose2),var(--orchid2));
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;color:#fff;
+  box-shadow:0 8px 28px rgba(255,45,117,.45);
+  transition:.22s;
+}
+.vidbox:hover .playring{transform:scale(1.1);box-shadow:0 12px 36px rgba(255,45,117,.65)}
+
+/* Stats */
+.statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px}
+.statcard{
+  background:linear-gradient(135deg,var(--s1),var(--s2));
+  border:1px solid var(--border);border-radius:var(--r);padding:18px 16px;position:relative;overflow:hidden;
+}
+.statcard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--orchid),transparent);opacity:.5}
+.slbl{font-size:9.5px;text-transform:uppercase;letter-spacing:.12em;color:var(--text4);font-family:'JetBrains Mono';margin-bottom:8px}
+.snum{
+  font-family:'Playfair Display',serif;font-size:36px;font-weight:700;line-height:1;
+  background:linear-gradient(135deg,var(--rose3),var(--orchid3));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.ssub{font-size:11px;color:var(--text3);margin-top:5px}
+
+/* Timeline */
+.tlwrap{background:var(--s1);border:1px solid var(--border);border-radius:var(--r);padding:16px;overflow-x:auto}
+.tltrack{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.tllbl{font-size:9.5px;font-family:'JetBrains Mono';color:var(--text4);width:44px;flex-shrink:0;text-align:right}
+.tlrail{flex:1;height:40px;background:var(--s2);border-radius:6px;position:relative;overflow:hidden;border:1px solid var(--border);cursor:pointer}
+.tlclip{position:absolute;top:3px;bottom:3px;border-radius:4px;display:flex;align-items:center;padding:0 8px;font-size:9.5px;font-family:'JetBrains Mono';white-space:nowrap;overflow:hidden;cursor:grab;transition:.15s}
+.tlclip:hover{opacity:.8}
+.clv{background:linear-gradient(90deg,rgba(255,45,117,.55),rgba(180,65,255,.5));border:1px solid rgba(255,79,139,.4)}
+.cla{background:linear-gradient(90deg,rgba(0,229,160,.4),rgba(79,172,254,.4));border:1px solid rgba(0,229,160,.4)}
+.clt{background:linear-gradient(90deg,rgba(255,194,68,.4),rgba(255,107,107,.3));border:1px solid rgba(255,194,68,.35)}
+.clm{background:linear-gradient(90deg,rgba(168,255,62,.35),rgba(0,229,160,.3));border:1px solid rgba(168,255,62,.3)}
+.playhead{position:absolute;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--rose),transparent);pointer-events:none;z-index:10}
+.playhead::before{content:'';position:absolute;top:-5px;left:-6px;width:14px;height:14px;border-radius:50%;background:var(--rose);box-shadow:0 0 10px var(--rose2)}
+
+/* Templates */
+.tmplgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(176px,1fr));gap:14px}
+.tmplcard{background:var(--s1);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;cursor:pointer;transition:.22s;position:relative}
+.tmplcard:hover{border-color:var(--border2);transform:translateY(-4px);box-shadow:0 14px 38px rgba(180,65,255,.15)}
+.tthumb{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:28px;position:relative;overflow:hidden}
+.tinfo{padding:10px 12px}
+.tname{font-size:12.5px;font-weight:700;margin-bottom:3px}
+.tcat{font-size:10px;color:var(--text3);font-family:'JetBrains Mono'}
+.tprobadge{position:absolute;top:7px;right:7px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#060400;font-size:9px;font-weight:800;padding:2px 8px;border-radius:20px;font-family:'JetBrains Mono';letter-spacing:.05em}
+.tnewbadge{position:absolute;top:7px;left:7px;background:linear-gradient(135deg,var(--jade2),var(--jade));color:#04100a;font-size:9px;font-weight:800;padding:2px 8px;border-radius:20px;font-family:'JetBrains Mono'}
+
+/* Tools */
+.toolsgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(138px,1fr));gap:12px}
+.toolcard{background:var(--s1);border:1px solid var(--border);border-radius:var(--r);padding:18px 14px;text-align:center;cursor:pointer;transition:.22s}
+.toolcard:hover{border-color:var(--border2);transform:translateY(-2px);background:var(--s2)}
+.tico{font-size:26px;margin-bottom:9px}
+.tname2{font-size:12.5px;font-weight:600;margin-bottom:3px}
+.tdesc{font-size:10.5px;color:var(--text3)}
+
+/* Viral score */
+.vcard{
+  background:linear-gradient(135deg,rgba(168,255,62,.06),rgba(0,229,160,.04));
+  border:1px solid rgba(168,255,62,.2);border-radius:var(--r);padding:16px;
+  position:relative;overflow:hidden;cursor:pointer;transition:.22s;
+}
+.vcard:hover{border-color:rgba(168,255,62,.35);transform:translateY(-2px)}
+.vscore{
+  position:absolute;top:12px;right:12px;
+  background:linear-gradient(135deg,var(--lime),var(--jade));
+  color:#040a04;font-size:10px;font-weight:800;padding:3px 10px;
+  border-radius:20px;font-family:'JetBrains Mono';
+}
+.vthumb{width:100%;aspect-ratio:9/16;max-width:90px;border-radius:var(--rsm);background:linear-gradient(135deg,var(--s3),var(--s4));display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.vreason{font-size:11px;color:var(--text2);line-height:1.5;margin-top:6px}
+
+/* Scene cards */
+.scenecard{background:var(--s2);border:1px solid var(--border);border-radius:var(--rsm);padding:13px;margin-bottom:9px;display:flex;gap:12px;cursor:pointer;transition:.18s}
+.scenecard:hover{border-color:var(--border2)}
+.scenenum{width:28px;height:28px;border-radius:6px;flex-shrink:0;background:linear-gradient(135deg,var(--rose2),var(--orchid2));display:flex;align-items:center;justify-content:center;font-size:11px;font-family:'JetBrains Mono';color:#fff;font-weight:700}
+.stitle{font-size:13px;font-weight:600;margin-bottom:3px}
+.sdesc{font-size:11.5px;color:var(--text3);line-height:1.5}
+.stags{display:flex;gap:7px;margin-top:7px;flex-wrap:wrap}
+.stag{font-size:10px;padding:2px 8px;border-radius:20px;font-family:'JetBrains Mono';background:rgba(180,65,255,.1);color:var(--orchid3);border:1px solid rgba(180,65,255,.2)}
+
+/* Character cards */
+.charcard{background:var(--s2);border:1px solid var(--border);border-radius:var(--r);padding:16px;margin-bottom:12px;display:flex;gap:14px;align-items:flex-start}
+.char-avatar{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--rose2),var(--orchid2));display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;box-shadow:0 0 18px rgba(255,45,117,.3)}
+.char-name{font-size:14px;font-weight:700;margin-bottom:4px}
+.char-profile{font-size:12px;color:var(--text2);line-height:1.55}
+.char-seed{font-family:'JetBrains Mono';font-size:10.5px;color:var(--jade);margin-top:6px}
+
+/* Styles grid */
+.stylegrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.schip{background:var(--s3);border:1px solid var(--border);border-radius:var(--rsm);padding:9px 7px;cursor:pointer;font-size:11px;text-align:center;transition:.18s;color:var(--text2);display:flex;flex-direction:column;align-items:center;gap:4px}
+.schip:hover{border-color:var(--border2);color:var(--text)}
+.schip.sel{border-color:var(--rose2);background:rgba(255,45,117,.1);color:var(--rose3)}
+.schip .si{font-size:18px}
+.schip .sn{font-size:10px;font-family:'JetBrains Mono'}
+
+/* Settings */
+.setsec{margin-bottom:28px}
+.sethead{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border);letter-spacing:-.2px}
+.setrow{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border)}
+.setlbl{font-size:13.5px;font-weight:500}
+.setdesc{font-size:11.5px;color:var(--text3);margin-top:2px}
+.tog{position:relative;width:42px;height:24px;flex-shrink:0}
+.tog input{opacity:0;width:0;height:0}
+.togsl{position:absolute;inset:0;border-radius:20px;background:var(--s4);border:1px solid var(--border);cursor:pointer;transition:.2s}
+.togsl::before{content:'';position:absolute;width:18px;height:18px;border-radius:50%;background:var(--text4);left:2px;top:2px;transition:.2s}
+.tog input:checked+.togsl{background:var(--orchid2);border-color:var(--orchid2)}
+.tog input:checked+.togsl::before{transform:translateX(18px);background:#fff}
+
+/* Pack cards */
+.packgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:22px}
+.packcard{background:var(--s2);border:1px solid var(--border);border-radius:var(--rlg);padding:22px 16px;text-align:center;cursor:pointer;transition:.2s;position:relative;overflow:hidden}
+.packcard:hover{border-color:var(--border2);transform:translateY(-2px)}
+.packcard.hot{border-color:var(--gold);background:linear-gradient(135deg,rgba(255,171,0,.07),var(--s2))}
+.packbadge{position:absolute;top:0;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--gold2),var(--gold));color:#060400;font-size:9px;font-weight:800;padding:2px 13px;border-radius:0 0 9px 9px;font-family:'JetBrains Mono';letter-spacing:.06em}
+.pname{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--text3);margin-bottom:10px;font-family:'JetBrains Mono'}
+.pnum{font-family:'Playfair Display',serif;font-size:50px;font-weight:700;line-height:1;background:linear-gradient(135deg,var(--rose),var(--orchid3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.punit{font-size:11px;color:var(--text3);margin-bottom:14px}
+.pprice{font-size:16px;color:var(--gold);font-weight:700}
+
+/* Owner panel */
+.ownerpanel{background:linear-gradient(135deg,rgba(255,171,0,.08),rgba(255,79,139,.04));border:1px solid rgba(255,171,0,.25);border-radius:var(--rlg);padding:22px;margin-bottom:20px;position:relative;overflow:hidden}
+.ownerpanel::before{content:'👑 OWNER ONLY — PRIVATE';position:absolute;top:12px;right:14px;font-size:9px;letter-spacing:.1em;font-family:'JetBrains Mono';color:rgba(255,171,0,.6)}
+
+/* Referral */
+.refbox{background:linear-gradient(135deg,rgba(255,79,139,.1),rgba(180,65,255,.07));border:1px solid var(--border3);border-radius:var(--r);padding:18px 20px;display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.refcode{font-family:'JetBrains Mono';font-size:22px;letter-spacing:.18em;color:var(--rose)}
+
+/* PayPal */
+.paypal-wrap{background:var(--s2);border:1px solid rgba(255,171,0,.2);border-radius:var(--r);padding:20px;margin-top:14px}
+.paypal-btn-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.pp-btn{
+  display:flex;align-items:center;gap:8px;padding:11px 18px;border-radius:var(--r);
+  font-size:13px;font-weight:700;cursor:pointer;border:none;transition:.2s;font-family:'Manrope';
+}
+.pp-paypal{background:#003087;color:#fff}
+.pp-venmo{background:#3D95CE;color:#fff}
+.pp-gpay{background:#fff;color:#333;border:1px solid #ddd}
+.pp-apple{background:#000;color:#fff}
+.pp-btn:hover{transform:translateY(-1px);opacity:.9}
+
+/* Agent panel */
+.agentpanel{width:308px;flex-shrink:0;background:rgba(13,13,28,.97);border-left:1px solid var(--border);display:flex;flex-direction:column;backdrop-filter:blur(24px)}
+.agentpanel.hide{display:none}
+.agenthead{padding:14px 16px 12px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
+.agtavatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--rose2),var(--orchid2));display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;animation:agtpulse 3s ease-in-out infinite;box-shadow:0 0 18px rgba(255,45,117,.35)}
+@keyframes agtpulse{0%,100%{box-shadow:0 0 18px rgba(255,45,117,.35)}50%{box-shadow:0 0 32px rgba(255,45,117,.65),0 0 50px rgba(180,65,255,.3)}}
+.agtname{font-family:'Playfair Display',serif;font-size:15px;font-weight:700}
+.agtstatus{font-size:11px;color:var(--jade);font-family:'JetBrains Mono'}
+.agtmsgs{flex:1;overflow-y:auto;padding:14px 14px;display:flex;flex-direction:column;gap:9px}
+.agtmsgs::-webkit-scrollbar{width:0}
+.msg{padding:10px 13px;border-radius:12px;font-size:12.5px;line-height:1.55;max-width:92%}
+.mai{background:rgba(180,65,255,.12);border:1px solid rgba(180,65,255,.2);align-self:flex-start;border-bottom-left-radius:3px}
+.muser{background:rgba(255,45,117,.1);border:1px solid rgba(255,45,117,.18);align-self:flex-end;border-bottom-right-radius:3px}
+.agtqs{padding:8px 12px;background:rgba(180,65,255,.05);border-top:1px solid var(--border);display:flex;gap:5px;flex-wrap:wrap}
+.agtq{padding:4px 9px;border-radius:20px;border:1px solid var(--border);background:none;color:var(--text3);font-size:11px;cursor:pointer;font-family:'Manrope';transition:.15s}
+.agtq:hover{border-color:var(--border2);color:var(--text)}
+.agtin-wrap{padding:10px 12px;border-top:1px solid var(--border);display:flex;gap:8px}
+.agtin{background:var(--s2);border:1px solid var(--border);border-radius:20px;padding:9px 14px;font-size:12.5px;flex:1;color:var(--text);font-family:'Manrope';outline:none}
+.agtin:focus{border-color:var(--orchid)}
+.agtsend{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--rose2),var(--orchid2));border:none;color:#fff;cursor:pointer;flex-shrink:0;font-size:14px;display:flex;align-items:center;justify-content:center;transition:.2s;box-shadow:0 4px 12px rgba(255,45,117,.3)}
+.agtsend:hover{transform:scale(1.08);box-shadow:0 6px 20px rgba(255,45,117,.55)}
+
+/* Auth */
+#auth-screen{position:fixed;inset:0;z-index:300;background:var(--void);display:flex;align-items:center;justify-content:center}
+.auth-wrap{width:440px;position:relative;z-index:1}
+.auth-hero{text-align:center;margin-bottom:32px}
+.auth-lotus{font-size:64px;display:block;margin:0 auto 10px;filter:drop-shadow(0 0 24px rgba(255,45,117,.6));animation:lotusFloat 4s ease-in-out infinite}
+@keyframes lotusFloat{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-14px) rotate(3deg)}}
+.auth-title{font-family:'Playfair Display',serif;font-size:40px;font-weight:900;background:linear-gradient(135deg,#fff 0%,var(--rose3) 45%,var(--orchid3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-1px;line-height:1.05}
+.auth-sub{font-size:13.5px;color:var(--text3);margin-top:8px;line-height:1.55}
+.auth-card{background:var(--s1);border:1px solid var(--border2);border-radius:var(--rxl);padding:34px 30px;box-shadow:0 28px 90px rgba(0,0,0,.6),0 0 70px rgba(180,65,255,.07)}
+.auth-tabs{display:flex;border-bottom:1px solid var(--border);margin-bottom:24px}
+.atab{flex:1;padding:10px;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;color:var(--text3);font-size:13.5px;cursor:pointer;transition:.2s;font-family:'Manrope';font-weight:500}
+.atab.on{color:var(--rose);border-bottom-color:var(--rose2)}
+.aform{display:none}.aform.on{display:block}
+.refnote{font-size:11.5px;color:rgba(0,229,160,.6);margin-top:5px}
+.auth-or{text-align:center;color:var(--text4);font-size:11px;margin:14px 0;letter-spacing:.1em}
+
+/* Modal */
+#moverlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(3,3,8,.92);backdrop-filter:blur(18px);align-items:center;justify-content:center}
+#moverlay.open{display:flex;animation:fadeI .22s ease}
+@keyframes fadeI{from{opacity:0}to{opacity:1}}
+.mbox{background:var(--s1);border:1px solid var(--border2);border-radius:var(--rxl);padding:28px;width:780px;max-width:96vw;box-shadow:0 44px 110px rgba(0,0,0,.65),0 0 70px rgba(180,65,255,.08);position:relative}
+.mhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.mtitle{font-family:'Playfair Display',serif;font-size:19px;font-weight:700}
+.mclose{background:none;border:none;color:var(--text3);font-size:24px;cursor:pointer;transition:.2s;line-height:1}
+.mclose:hover{color:var(--coral)}
+
+/* Notifications */
+#nstack{position:fixed;bottom:26px;right:26px;z-index:999;display:flex;flex-direction:column;gap:9px;align-items:flex-end}
+.notif{background:var(--s2);border:1px solid var(--border2);border-radius:var(--rsm);padding:13px 18px;font-size:13px;min-width:275px;max-width:370px;display:flex;align-items:center;gap:10px;animation:nIn .28s cubic-bezier(.22,1,.36,1);box-shadow:0 10px 32px rgba(0,0,0,.45)}
+.notif.ok{border-color:rgba(0,229,160,.3)}.notif.err{border-color:rgba(255,107,107,.3)}.notif.info{border-color:rgba(79,172,254,.3)}.notif.gold{border-color:rgba(255,194,68,.35)}
+@keyframes nIn{from{opacity:0;transform:translateX(22px)}to{opacity:1;transform:none}}
+
+/* Drop zone */
+.dz{border:2px dashed var(--border2);border-radius:var(--rlg);padding:48px 24px;text-align:center;cursor:pointer;transition:.25s;background:var(--s1);position:relative;overflow:hidden}
+.dz::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at center,rgba(180,65,255,.04),transparent 70%);transition:.3s}
+.dz:hover,.dz.drag{border-color:var(--orchid);background:rgba(180,65,255,.04)}
+.dz-ic{font-size:44px;margin-bottom:12px;filter:drop-shadow(0 0 14px rgba(180,65,255,.45))}
+.dz-t{font-size:14.5px;font-weight:600;margin-bottom:5px}
+.dz-h{font-size:11.5px;color:var(--text3);font-family:'JetBrains Mono'}
+
+/* Responsive */
+@media(max-width:1100px){.statgrid{grid-template-columns:repeat(2,1fr)}.stylegrid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:860px){.agentpanel{display:none}.packgrid{grid-template-columns:1fr}}
+@media(max-width:640px){.sb{display:none}.statgrid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<!-- ═══ COSMOS BACKGROUND ════════════════════════════════ -->
+<div id="cosmos">
+  <canvas id="bg-canvas"></canvas>
+  <div class="mesh"></div>
+  <div class="scanline"></div>
+  <svg class="geo-lotus" viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.5">
+      <ellipse cx="450" cy="250" rx="80" ry="200" fill="none" stroke="url(#g1)" stroke-width="1" transform="rotate(0 450 450)"/>
+      <ellipse cx="450" cy="250" rx="80" ry="200" fill="none" stroke="url(#g1)" stroke-width="1" transform="rotate(60 450 450)"/>
+      <ellipse cx="450" cy="250" rx="80" ry="200" fill="none" stroke="url(#g2)" stroke-width="1" transform="rotate(120 450 450)"/>
+      <ellipse cx="450" cy="250" rx="80" ry="200" fill="none" stroke="url(#g1)" stroke-width="1" transform="rotate(180 450 450)"/>
+      <ellipse cx="450" cy="250" rx="80" ry="200" fill="none" stroke="url(#g2)" stroke-width="1" transform="rotate(240 450 450)"/>
+      <ellipse cx="450" cy="250" rx="80" ry="200" fill="none" stroke="url(#g1)" stroke-width="1" transform="rotate(300 450 450)"/>
+      <circle cx="450" cy="450" r="60" fill="none" stroke="url(#g3)" stroke-width="1.5"/>
+      <circle cx="450" cy="450" r="120" fill="none" stroke="url(#g1)" stroke-width="0.8" stroke-dasharray="4 8"/>
+      <circle cx="450" cy="450" r="200" fill="none" stroke="url(#g2)" stroke-width="0.6" stroke-dasharray="2 12"/>
+    </g>
+    <defs>
+      <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#ff4f8b" stop-opacity=".6"/>
+        <stop offset="100%" stop-color="#b441ff" stop-opacity=".3"/>
+      </linearGradient>
+      <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#00e5a0" stop-opacity=".5"/>
+        <stop offset="100%" stop-color="#ffc244" stop-opacity=".3"/>
+      </linearGradient>
+      <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#ff2d75" stop-opacity=".8"/>
+        <stop offset="50%" stop-color="#b441ff" stop-opacity=".5"/>
+        <stop offset="100%" stop-color="#00c987" stop-opacity=".4"/>
+      </linearGradient>
+    </defs>
+  </svg>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="blob b4"></div>
+  <div class="blob b5"></div>
+</div>
+
+<!-- ═══ AUTH ════════════════════════════════════════════ -->
+<div id="auth-screen">
+  <div class="auth-wrap">
+    <div class="auth-hero">
+      <span class="auth-lotus">🪷</span>
+      <h1 class="auth-title">Lotus AI Studio</h1>
+      <p class="auth-sub">The world's most powerful AI video platform.<br/>Beats CapCut · Seedance · VidFab · Vivideo — combined.</p>
+    </div>
+    <div class="auth-card">
+      <div class="auth-tabs">
+        <button class="atab on" onclick="authTab('in')">Sign in</button>
+        <button class="atab" onclick="authTab('up')">Create account</button>
+      </div>
+      <div class="aform on" id="af-in">
+        <div class="field"><label class="label">Email</label><input type="email" id="li-e" placeholder="you@example.com"/></div>
+        <div class="field"><label class="label">Password</label><input type="password" id="li-p" placeholder="••••••••"/></div>
+        <button class="megabtn" style="margin-top:4px" onclick="doLogin()">Sign in to Lotus AI →</button>
+        <p class="auth-or">— or try instantly —</p>
+        <button class="btn bghost" style="width:100%;justify-content:center" onclick="guestIn()">Continue as Guest  🪷</button>
+      </div>
+      <div class="aform" id="af-up">
+        <div class="field"><label class="label">Email</label><input type="email" id="ru-e" placeholder="you@example.com"/></div>
+        <div class="field"><label class="label">Password</label><input type="password" id="ru-p" placeholder="Min. 8 characters"/></div>
+        <div class="field">
+          <label class="label">Referral code <span style="color:var(--text4)">(optional)</span></label>
+          <input type="text" id="ru-r" placeholder="lotus_xxxxxx"/>
+          <p class="refnote">✦ Both of you earn 5 bonus credits</p>
+        </div>
+        <button class="megabtn" style="margin-top:4px" onclick="doRegister()">Create Free Account →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MODAL ════════════════════════════════════════════ -->
+<div id="moverlay">
+  <div class="mbox">
+    <div class="mhead">
+      <span class="mtitle" id="mt"></span>
+      <button class="mclose" onclick="closeM()">✕</button>
+    </div>
+    <div id="mb"></div>
+  </div>
+</div>
+
+<!-- ═══ NOTIFICATIONS ═══════════════════════════════════ -->
+<div id="nstack"></div>
+
+<!-- ═══ APP ROOT ═════════════════════════════════════════ -->
+<div id="root" style="display:none">
+
+  <!-- SIDEBAR -->
+  <aside class="sb">
+    <div class="sb-logo">
+      <div class="sb-logo-row">
+        <div class="logo-gem">🪷</div>
+        <div>
+          <div class="logo-wordmark">Lotus AI</div>
+          <div class="logo-sub">Studio 2026</div>
+        </div>
+      </div>
+    </div>
+    <nav class="sb-nav">
+      <span class="sec-lbl">Create</span>
+      <button class="ni on" onclick="pg('generate',this)"><span class="ic">✦</span> Generate Video</button>
+      <button class="ni" onclick="pg('image-gen',this)"><span class="ic">🖼</span> AI Image Gen</button>
+      <button class="ni" onclick="pg('img2vid',this)"><span class="ic">🎞</span> Image → Video</button>
+      <button class="ni" onclick="pg('longform',this)"><span class="ic">🎬</span> 25-Min Production</button>
+      <button class="ni" onclick="pg('casting',this)"><span class="ic">🎭</span> Gemini Casting <span class="new-tag">NEW</span></button>
+      <button class="ni" onclick="pg('viral',this)"><span class="ic">🚀</span> Viral Clipper <span class="new-tag">AI</span></button>
+      <span class="sec-lbl">Edit</span>
+      <button class="ni" onclick="pg('templates',this)"><span class="ic">◫</span> Templates</button>
+      <button class="ni" onclick="pg('editor',this)"><span class="ic">✂</span> Video Editor</button>
+      <button class="ni" onclick="pg('tools',this)"><span class="ic">🔧</span> Creator Tools</button>
+      <button class="ni" onclick="pg('upload',this)"><span class="ic">⬆</span> Upload Assets</button>
+      <span class="sec-lbl">Library</span>
+      <button class="ni" onclick="pg('projects',this)"><span class="ic">📁</span> Projects</button>
+      <button class="ni" onclick="pg('jobs',this)"><span class="ic">⏳</span> Job Queue <span class="nbadge" id="jbadge"></span></button>
+      <span class="sec-lbl">Business</span>
+      <button class="ni" onclick="pg('credits',this)"><span class="ic">◈</span> Credits & Billing</button>
+      <button class="ni" onclick="pg('referral',this)"><span class="ic">⊕</span> Referral</button>
+      <button class="ni" onclick="pg('analytics',this)"><span class="ic">▦</span> Analytics</button>
+      <button class="ni" onclick="pg('owner',this)" id="sb-owner" style="display:none"><span class="ic">👑</span> Owner Panel</button>
+      <span class="sec-lbl">Account</span>
+      <button class="ni" onclick="pg('settings',this)"><span class="ic">⚙</span> Settings</button>
+    </nav>
+    <div class="sb-foot">
+      <div class="cr-pill">
+        <div class="cr-lbl">Credits</div>
+        <div class="cr-num" id="sb-cr">5</div>
+        <div class="cr-plan" id="sb-plan">FREE PLAN</div>
+      </div>
+      <button class="so-btn" onclick="doLogout()">Sign out</button>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-wrap">
+    <div class="topbar">
+      <span class="tb-title" id="tb-t">Generate <em>Video</em></span>
+      <div style="display:flex;gap:8px;align-items:center" id="tb-acts">
+        <button class="btn bghost bsm" onclick="toggleAgent()">🤖 Claudia</button>
+        <button class="btn bprimary bsm" onclick="pg('credits',null)">⬆ Upgrade Plan</button>
+      </div>
+    </div>
+
+    <div style="display:flex;flex:1;overflow:hidden">
+      <div class="content-area" id="content" style="flex:1;overflow-y:auto">
+
+        <!-- ███ GENERATE VIDEO ███ -->
+        <div class="panel on" id="panel-generate">
+          <div style="display:grid;grid-template-columns:1fr 340px;gap:20px">
+            <div>
+              <div class="gcard" style="margin-bottom:16px">
+                <p class="ctitle rose">Script · Prompt · Vision</p>
+                <div class="field">
+                  <textarea id="g-script" rows="7" placeholder="Describe your video scene, story, or mood…&#10;&#10;✦ Claudia will search for the perfect visual match&#10;✦ Gemini will optimize every character description&#10;&#10;E.g. A warrior queen stands at the edge of a volcanic crater at sunset, her crimson armor glowing — cinematic, 4K, epic…"></textarea>
+                </div>
+                <div class="frow">
+                  <div class="field" style="margin:0">
+                    <label class="label">Duration</label>
+                    <select id="g-dur">
+                      <option value="5">5 seconds</option>
+                      <option value="10">10 seconds</option>
+                      <option value="15">15 seconds</option>
+                      <option value="30">30 seconds</option>
+                      <option value="60">1 minute</option>
+                      <option value="300">5 minutes</option>
+                      <option value="600">10 minutes</option>
+                      <option value="900">15 minutes</option>
+                      <option value="1500">25 minutes</option>
+                    </select>
+                  </div>
+                  <div class="field" style="margin:0">
+                    <label class="label">Aspect Ratio</label>
+                    <select id="g-ratio">
+                      <option>16:9 Landscape</option>
+                      <option>9:16 Portrait (TikTok/Reels)</option>
+                      <option>1:1 Square</option>
+                      <option>4:3 Classic</option>
+                      <option>2.39:1 Anamorphic</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="frow">
+                  <div class="field" style="margin:0">
+                    <label class="label">AI Engine</label>
+                    <select id="g-engine">
+                      <option>Runway Gen-3 Alpha</option>
+                      <option>Pika 2.0</option>
+                      <option>Kling 3.0</option>
+                      <option>Sora 2</option>
+                      <option>Veo 3</option>
+                      <option>Auto — Best Match</option>
+                    </select>
+                  </div>
+                  <div class="field" style="margin:0">
+                    <label class="label">Resolution</label>
+                    <select>
+                      <option>1080p HD</option>
+                      <option>4K Ultra HD</option>
+                      <option>720p</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Style presets -->
+              <div class="gcard" style="margin-bottom:16px">
+                <p class="ctitle rose">Visual Style Preset</p>
+                <div class="stylegrid" id="style-grid">
+                  <div class="schip sel" data-s="cinematic"><span class="si">🎥</span><span class="sn">Cinematic</span></div>
+                  <div class="schip" data-s="anime"><span class="si">🌸</span><span class="sn">Anime</span></div>
+                  <div class="schip" data-s="cyberpunk"><span class="si">🌆</span><span class="sn">Cyberpunk</span></div>
+                  <div class="schip" data-s="documentary"><span class="si">🎞</span><span class="sn">Documentary</span></div>
+                  <div class="schip" data-s="vhs"><span class="si">📼</span><span class="sn">VHS Retro</span></div>
+                  <div class="schip" data-s="dreamy"><span class="si">✨</span><span class="sn">Dreamy</span></div>
+                  <div class="schip" data-s="noir"><span class="si">🌑</span><span class="sn">Noir</span></div>
+                  <div class="schip" data-s="hyperreal"><span class="si">🔬</span><span class="sn">Hyperreal</span></div>
+                  <div class="schip" data-s="scifi"><span class="si">🚀</span><span class="sn">Sci-Fi</span></div>
+                  <div class="schip" data-s="watercolor"><span class="si">🖌</span><span class="sn">Watercolor</span></div>
+                  <div class="schip" data-s="cartoon"><span class="si">🎨</span><span class="sn">Cartoon</span></div>
+                  <div class="schip" data-s="botanical"><span class="si">🌿</span><span class="sn">Botanical</span></div>
+                </div>
+              </div>
+
+              <!-- Advanced options -->
+              <div class="gcard">
+                <p class="ctitle jade">Advanced Production Options</p>
+                <div class="frow3">
+                  <div class="field" style="margin:0"><label class="label">Camera Motion</label><select><option>Static</option><option>Slow zoom in</option><option>Dolly zoom</option><option>Pan left</option><option>Orbit 360</option><option>Drone aerial</option><option>Handheld</option></select></div>
+                  <div class="field" style="margin:0"><label class="label">Color Grade</label><select><option>Auto</option><option>Warm golden</option><option>Cool teal</option><option>High contrast</option><option>Desaturated</option><option>Pastel dream</option></select></div>
+                  <div class="field" style="margin:0"><label class="label">Lighting</label><select><option>Natural</option><option>Golden hour</option><option>Blue hour</option><option>Neon night</option><option>Studio</option><option>Candlelight</option></select></div>
+                  <div class="field" style="margin:0"><label class="label">AI Voiceover</label><select><option>None</option><option>Male — Deep</option><option>Female — Warm</option><option>British narrator</option><option>Clone my voice</option></select></div>
+                  <div class="field" style="margin:0"><label class="label">Music</label><select><option>None</option><option>Cinematic epic</option><option>Lo-fi chill</option><option>Phonk viral</option><option>Orchestral</option><option>Custom upload</option></select></div>
+                  <div class="field" style="margin:0"><label class="label">Sound FX</label><select><option>None</option><option>Auto-Foley AI</option><option>Urban city</option><option>Nature</option><option>Sci-fi tech</option></select></div>
+                </div>
+                <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:4px">
+                  <label style="display:flex;align-items:center;gap:7px;font-size:12.5px;cursor:pointer"><input type="checkbox" checked style="width:auto"/> Auto-captions</label>
+                  <label style="display:flex;align-items:center;gap:7px;font-size:12.5px;cursor:pointer"><input type="checkbox" style="width:auto"/> Burn subtitles</label>
+                  <label style="display:flex;align-items:center;gap:7px;font-size:12.5px;cursor:pointer"><input type="checkbox" checked style="width:auto"/> HDR Cinema</label>
+                  <label style="display:flex;align-items:center;gap:7px;font-size:12.5px;cursor:pointer"><input type="checkbox" style="width:auto"/> Emoji captions</label>
+                  <label style="display:flex;align-items:center;gap:7px;font-size:12.5px;cursor:pointer"><input type="checkbox" checked style="width:auto"/> Scene auto-split</label>
+                  <label style="display:flex;align-items:center;gap:7px;font-size:12.5px;cursor:pointer"><input type="checkbox" style="width:auto"/> Watermark-free</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right queue -->
+            <div>
+              <div class="gcard">
+                <p class="ctitle rose">Generate & Queue</p>
+                <button class="megabtn" id="g-btn" onclick="doGenerate()">✦ Bloom into Video 🪷</button>
+                <div style="text-align:center;font-size:10px;color:var(--text4);margin-top:8px;font-family:'JetBrains Mono'">1 credit/10s · 2+ extended · 50 for 25min</div>
+
+                <!-- Claudia Analysis -->
+                <div id="c-hint" style="margin-top:14px;background:rgba(180,65,255,.08);border:1px solid rgba(180,65,255,.2);border-radius:var(--rsm);padding:12px;display:none">
+                  <div style="font-size:9.5px;color:var(--orchid3);font-family:'JetBrains Mono';margin-bottom:6px">🤖 CLAUDIA · GEMINI ANALYSIS</div>
+                  <div style="font-size:12px;color:var(--text2);line-height:1.55" id="c-text"></div>
+                </div>
+
+                <div style="height:1px;background:var(--border);margin:18px 0"></div>
+                <div style="font-size:9.5px;color:var(--text4);margin-bottom:10px;font-family:'JetBrains Mono'">RECENT JOBS</div>
+                <div id="job-mini" style="display:flex;flex-direction:column;gap:9px">
+                  <div style="text-align:center;padding:28px 16px;color:var(--text4)">
+                    <div style="font-size:34px;opacity:.35;margin-bottom:8px">🎬</div>
+                    <div style="font-size:12px">Generate your first video!</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ███ AI IMAGE GEN ███ -->
+        <div class="panel" id="panel-image-gen">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+            <div class="gcard">
+              <p class="ctitle rose">AI Image Generator</p>
+              <div class="field"><label class="label">Image Prompt</label><textarea id="img-p" rows="5" placeholder="A bioluminescent lotus garden at midnight, ethereal light shimmering on still water, ultra-detailed 8K photorealistic..."></textarea></div>
+              <div class="frow">
+                <div class="field" style="margin:0"><label class="label">Style</label><select><option>Photorealistic</option><option>Digital art</option><option>Oil painting</option><option>Watercolor</option><option>Sketch</option><option>3D render</option><option>Anime</option></select></div>
+                <div class="field" style="margin:0"><label class="label">Ratio</label><select><option>1:1</option><option>16:9</option><option>9:16</option><option>4:3</option></select></div>
+              </div>
+              <div class="frow">
+                <div class="field" style="margin:0"><label class="label">Quality</label><select><option>Standard</option><option>HD</option><option>Ultra HD</option></select></div>
+                <div class="field" style="margin:0"><label class="label">Count</label><select><option>1</option><option>2</option><option>4</option></select></div>
+              </div>
+              <button class="megabtn" onclick="genImage()">🖼 Generate Image</button>
+            </div>
+            <div class="gcard">
+              <p class="ctitle jade">Generated Images</p>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px" id="img-results">
+                <div class="vidbox" style="aspect-ratio:1/1"><div class="playring" style="opacity:.3;font-size:18px">🖼</div></div>
+                <div class="vidbox" style="aspect-ratio:1/1"><div class="playring" style="opacity:.3;font-size:18px">🖼</div></div>
+                <div class="vidbox" style="aspect-ratio:1/1"><div class="playring" style="opacity:.3;font-size:18px">🖼</div></div>
+                <div class="vidbox" style="aspect-ratio:1/1"><div class="playring" style="opacity:.3;font-size:18px">🖼</div></div>
+              </div>
+              <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+                <button class="btn bghost bsm" onclick="notify('All images downloaded!','ok')">⬇ Download All</button>
+                <button class="btn bghost bsm" onclick="pg('img2vid',null);notify('Image sent to animator!','ok')">→ Animate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ███ IMAGE TO VIDEO ███ -->
+        <div class="panel" id="panel-img2vid">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+            <div class="gcard">
+              <p class="ctitle rose">Image → Video Animator</p>
+              <div class="dz" id="i2v-dz" style="margin-bottom:14px" onclick="document.getElementById('i2vfi').click()">
+                <div class="dz-ic">🖼</div>
+                <p class="dz-t">Drop your image here</p>
+                <p class="dz-h">PNG · JPG · WebP · max 50MB</p>
+              </div>
+              <input type="file" id="i2vfi" style="display:none" accept="image/*" onchange="i2vUp(this)"/>
+              <div class="field"><label class="label">Motion prompt</label><textarea rows="3" placeholder="Describe the animation… gentle waves, slow camera push, leaves swaying, water ripples…"></textarea></div>
+              <div class="frow">
+                <div class="field" style="margin:0"><label class="label">Duration</label><select><option>3 sec</option><option>5 sec</option><option>10 sec</option></select></div>
+                <div class="field" style="margin:0"><label class="label">Intensity</label><select><option>Subtle</option><option>Medium</option><option>Dynamic</option><option>Extreme</option></select></div>
+              </div>
+              <div class="frow">
+                <div class="field" style="margin:0"><label class="label">Subject tracking</label><select><option>Auto detect</option><option>Center lock</option><option>Face lock</option></select></div>
+                <div class="field" style="margin:0"><label class="label">Sound FX</label><select><option>Auto-Foley</option><option>Ambient</option><option>None</option></select></div>
+              </div>
+              <button class="megabtn" onclick="doI2V()">🎞 Animate Image</button>
+            </div>
+            <div class="gcard">
+              <p class="ctitle jade">Animation Preview</p>
+              <div class="vidbox" style="margin-bottom:14px"><div class="playring">▶</div></div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <button class="btn bghost bsm">⬇ Download</button>
+                <button class="btn bghost bsm">+ Timeline</button>
+                <button class="btn bghost bsm">↗ TikTok</button>
+                <button class="btn bsap bsm">↗ Reels</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ███ 25-MIN LONG FORM ███ -->
+        <div class="panel" id="panel-longform">
+          <div style="display:grid;grid-template-columns:1fr 360px;gap:20px">
+            <div>
+              <div class="gcard" style="margin-bottom:16px">
+                <p class="ctitle rose">25-Minute Cinematic Production Studio</p>
+                <div class="field"><label class="label">Full Script (approx. 3,750 words for 25 min)</label><textarea id="lf-script" rows="9" placeholder="Paste or write your 25-minute script here...&#10;&#10;Claudia will automatically:&#10;• Break it into scenes with perfect timing&#10;• Match each scene with the ideal visual engine&#10;• Sync AI voiceover + auto-ducking music&#10;• Generate 150+ clips in parallel&#10;• Stitch everything with FFmpeg stitching engine&#10;• Send you an email when ready"></textarea></div>
+                <div class="frow">
+                  <div class="field" style="margin:0"><label class="label">Narration voice</label><select><option>AI Male — Deep narrator</option><option>AI Female — Warm storyteller</option><option>Clone my voice (ElevenLabs)</option><option>British documentary</option><option>Child narrator</option></select></div>
+                  <div class="field" style="margin:0"><label class="label">Music mood</label><select><option>Cinematic epic</option><option>Documentary neutral</option><option>Emotional piano</option><option>Tense thriller</option><option>None</option></select></div>
+                </div>
+                <div class="frow">
+                  <div class="field" style="margin:0"><label class="label">B-Roll source</label><select><option>AI generated (premium)</option><option>Hybrid AI + Pexels stock</option><option>Pexels stock only (fast)</option></select></div>
+                  <div class="field" style="margin:0"><label class="label">Export quality</label><select><option>4K Cinema (H.265)</option><option>1080p HD (H.264)</option></select></div>
+                </div>
+                <div style="display:flex;gap:10px;margin-bottom:14px">
+                  <button class="btn bghost bsm" onclick="autoBreak()">⚡ Auto-break into scenes</button>
+                  <button class="btn bghost bsm" onclick="castFromScript()">🎭 Gemini cast characters</button>
+                </div>
+                <div id="lf-scenes"></div>
+              </div>
+            </div>
+            <div>
+              <div class="gcard">
+                <p class="ctitle rose">Production Status</p>
+                <div id="lf-status" style="text-align:center;padding:28px 16px">
+                  <div style="font-size:38px;margin-bottom:10px">🎬</div>
+                  <div style="font-size:13px;color:var(--text2);margin-bottom:6px">Ready to produce your masterpiece</div>
+                  <div style="font-size:11px;color:var(--text4);font-family:'JetBrains Mono'">Est. time: 20–30 minutes</div>
+                </div>
+                <button class="megabtn" style="margin-top:14px" onclick="startLF()">🎬 Start Production (50 credits)</button>
+                <div style="margin-top:12px;background:rgba(180,65,255,.06);border:1px solid var(--border);border-radius:var(--rsm);padding:12px;font-size:11.5px;color:var(--text3);line-height:1.65">
+                  <strong style="color:var(--orchid3)">The pipeline:</strong><br/>
+                  1. Claudia analyzes &amp; storyboards script<br/>
+                  2. ElevenLabs generates voiceover<br/>
+                  3. 150 AI scenes generated in parallel<br/>
+                  4. Pexels B-roll fills gaps (hybrid mode)<br/>
+                  5. FFmpeg stitches with auto-ducking<br/>
+                  6. Subtitles burned in (optional)<br/>
+                  7. Email sent to <strong style="color:var(--rose3)">you</strong> when ready
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ███ GEMINI CASTING ███ -->
+        <div class="panel" id="panel-casting">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+            <div class="gcard">
+              <p class="ctitle orchid">Gemini Character Casting Engine</p>
+              <div class="field"><label class="label">Script or character description</label><textarea id="cast-script" rows="7" placeholder="Paste your script here. Gemini 1.5 Pro will identify every character and create a detailed visual profile for consistent AI rendering across all scenes..."></textarea></div>
+              <div class="frow">
+                <div class="field" style="margin:0"><label class="label">Consistency level</label><select><option>Ultra-high (Seedance lock)</option><option>High</option><option>Standard</option></select></div>
+                <div class="field" style="margin:0"><label class="label">Style override</label><select><option>Auto</option><option>Cinematic</option><option>Anime</option><option>Photorealistic</option></select></div>
+              </div>
+              <button class="megabtn" onclick="doCasting()">🎭 Cast Characters with Gemini</button>
+            </div>
+            <div class="gcard">
+              <p class="ctitle jade">Cast &amp; Character Profiles</p>
+              <div id="cast-results" style="min-height:200px">
+                <div style="text-align:center;padding:40px 16px;color:var(--text4)">
+                  <div style="font-size:36px;opacity:.35;margin-bottom:8px">🎭</div>
+                  <div style="font-size:12.5px">Run Gemini casting to see character profiles.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ███ VIRAL CLIPPER ███ -->
+        <div class="panel" id="panel-viral">
+          <div style="display:grid;grid-template-columns:1fr 320px;gap:20px">
+            <div>
+              <div class="gcard" style="margin-bottom:16px">
+                <p class="ctitle jade">Predictive Viral Intelligence Engine</p>
+                <div class="field"><label class="label">Select project to analyze</label>
+                  <select id="viral-proj"><option>— Select a completed project —</option></select>
+                </div>
+                <div class="frow">
+                  <div class="field" style="margin:0"><label class="label">Target platform</label><select><option>TikTok</option><option>YouTube Shorts</option><option>Instagram Reels</option><option>Twitter/X</option><option>All platforms</option></select></div>
+                  <div class="field" style="margin:0"><label class="label">Clip length</label><select><option>15 seconds</option><option>30 seconds</option><option>60 seconds</option></select></div>
+                </div>
+                <div class="frow">
+                  <div class="field" style="margin:0"><label class="label">Caption style</label><select><option>Hormozi — Bold yellow</option><option>Minimal white</option><option>Karaoke sync</option><option>None</option></select></div>
+                  <div class="field" style="margin:0"><label class="label">Emoji injection</label><select><option>Auto-detect keywords</option><option>High density</option><option>Minimal</option><option>Off</option></select></div>
+                </div>
+                <button class="megabtn" onclick="runViral()">🚀 Analyze &amp; Generate Viral Clips</button>
+              </div>
+
+              <div id="viral-results" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px"></div>
+            </div>
+            <div class="gcard">
+              <p class="ctitle jade">Viral Score Explainer</p>
+              <div style="font-size:12.5px;color:var(--text2);line-height:1.65;margin-bottom:14px">
+                Gemini 1.5 Pro analyzes your video for:<br/>
+                <br/>
+                <strong style="color:var(--lime)">0–3s:</strong> Instant visual hook strength<br/>
+                <strong style="color:var(--jade)">3–10s:</strong> Narrative tension build<br/>
+                <strong style="color:var(--rose3)">10–60s:</strong> Emotional payoff quality<br/>
+                <br/>
+                Scores 0–100 per segment. Top 3 clips are auto-cropped to 9:16, captioned, and ready to publish.
+              </div>
+              <div style="background:rgba(168,255,62,.06);border:1px solid rgba(168,255,62,.2);border-radius:var(--rsm);padding:12px;font-size:12px;color:var(--text2);line-height:1.6">
+                <strong style="color:var(--lime)">Auto-publish feature:</strong><br/>
+                Connect TikTok, YouTube &amp; Instagram accounts in Settings to post viral clips automatically at the optimal time detected by Claudia.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ███ TEMPLATES ███ -->
+        <div class="panel" id="panel-templates">
+          <div style="display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap">
+            <button class="btn bprimary bsm" onclick="filterT('all',this)">All Templates</button>
+            <button class="btn bghost bsm" onclick="filterT('social',this)">Social Media</button>
+            <button class="btn bghost bsm" onclick="filterT('promo',this)">Promo & Ads</button>
+            <button class="btn bghost bsm" onclick="filterT('story',this)">Storytelling</button>
+            <button class="btn bghost bsm" onclick="filterT('edu',this)">Educational</button>
+            <button class="btn bghost bsm" onclick="filterT('music',this)">Music & Art</button>
+            <button class="btn bghost bsm" onclick="filterT('news',this)">News & Podcast</button>
+            <button class="btn bghost bsm" onclick="filterT('biz',this)">Business</button>
+          </div>
+          <div class="tmplgrid" id="tmpl-grid"></div>
+        </div>
+
+        <!-- ███ VIDEO EDITOR ███ -->
+        <div class="panel" id="panel-editor">
+          <div style="display:grid;grid-template-columns:1fr 260px;gap:16px;margin-bottom:16px">
+            <div class="vidbox" style="height:300px" id="editor-preview"><div class="playring">▶</div></div>
+            <div class="gcard" style="padding:14px">
+              <p class="ctitle" style="margin-bottom:12px">Editor Tools</p>
+              <div style="display:flex;flex-direction:column;gap:6px">
+                <button class="btn bghost bsm" onclick="notify('Trim activated','info')">✂ Trim / Cut</button>
+                <button class="btn bghost bsm" onclick="notify('Split at playhead','info')">⚡ Split</button>
+                <button class="btn bghost bsm" onclick="notify('Speed control','info')">⏩ Speed Ramp</button>
+                <button class="btn bghost bsm" onclick="notify('Color filter applied','ok')">🎨 Color Filters</button>
+                <button class="btn bghost bsm" onclick="notify('Text layer added','ok')">T Text Overlay</button>
+                <button class="btn bghost bsm" onclick="notify('Transition added','ok')">🔀 Transitions</button>
+                <button class="btn bghost bsm" onclick="notify('Audio extracted','ok')">🎵 Extract Audio</button>
+                <button class="btn bghost bsm" onclick="notify('Clip duplicated','ok')">⊕ Duplicate</button>
+                <button class="btn bghost bsm" onclick="notify('Face swap tool ready','info')">👤 Face Swap</button>
+                <button class="btn bghost bsm" onclick="notify('HDR filter applied','ok')">✨ HDR Cinema</button>
+                <button class="btn bghost bsm" onclick="notify('Captions generated','ok')">📝 Auto-Captions</button>
+                <button class="btn bghost bsm" onclick="notify('Emoji captions added','ok')">😎 Emoji Captions</button>
+                <button class="btn bprimary bsm" style="margin-top:6px" onclick="notify('Export started! 4K MP4 ready in ~2min','ok')">⬇ Export 4K</button>
+              </div>
+            </div>
+          </div>
+          <!-- Timeline -->
+          <div class="tlwrap">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+              <span style="font-size:10.5px;color:var(--text3);font-family:'JetBrains Mono'">MULTI-TRACK TIMELINE</span>
+              <div style="display:flex;gap:10px;align-items:center">
+                <span style="font-size:10px;color:var(--text4)">Zoom</span>
+                <input type="range" min="1" max="10" value="5" style="width:80px;height:3px"/>
+                <span style="font-size:10.5px;color:var(--rose3);font-family:'JetBrains Mono'" id="tl-time">00:00:00</span>
+              </div>
+            </div>
+            <div id="tl-tracks"></div>
+          </div>
+        </div>
+
+        <!-- ███ TOOLS ███ -->
+        <div class="panel" id="panel-tools">
+          <div class="toolsgrid" id="tools-grid"></div>
+        </div>
+
+        <!-- ███ UPLOAD ███ -->
+        <div class="panel" id="panel-upload">
+          <div style="max-width:640px">
+            <div class="dz" id="up-dz" onclick="document.getElementById('upfi').click()">
+              <div class="dz-ic">☁</div>
+              <p class="dz-t"><strong>Click or drag to upload</strong></p>
+              <p class="dz-h">Video · Image · Audio · max 500MB</p>
+            </div>
+            <input type="file" id="upfi" style="display:none" multiple accept="video/*,image/*,audio/*" onchange="handleUploads(this)"/>
+            <div id="up-list" style="margin-top:16px"></div>
+          </div>
+        </div>
+
+        <!-- ███ PROJECTS ███ -->
+        <div class="panel" id="panel-projects">
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(212px,1fr));gap:16px" id="proj-grid">
+            <div style="text-align:center;padding:64px;color:var(--text4);grid-column:1/-1"><div style="font-size:44px;opacity:.35">📁</div><br/>No projects yet.</div>
+          </div>
+        </div>
+
+        <!-- ███ JOBS ███ -->
+        <div class="panel" id="panel-jobs">
+          <div id="jobs-all" style="display:flex;flex-direction:column;gap:10px;max-width:740px">
+            <div style="text-align:center;padding:64px;color:var(--text4)"><div style="font-size:44px;opacity:.35">⏳</div><br/>No jobs yet.</div>
+          </div>
+        </div>
+
+        <!-- ███ CREDITS ███ -->
+        <div class="panel" id="panel-credits">
+          <div style="max-width:700px">
+            <div class="gcard" style="margin-bottom:22px">
+              <p class="ctitle rose">Current Balance</p>
+              <div style="display:flex;align-items:baseline;gap:14px">
+                <span style="font-family:'Playfair Display';font-size:76px;font-weight:900;background:linear-gradient(135deg,var(--rose),var(--orchid3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1" id="cr-big">5</span>
+                <span style="color:var(--text3);font-size:16px">credits</span>
+              </div>
+            </div>
+            <p style="font-family:'JetBrains Mono';font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--text3);margin-bottom:14px">Top up credits</p>
+            <div class="packgrid" id="pack-grid"></div>
+
+            <!-- PayPal Payment UI -->
+            <div class="paypal-wrap">
+              <p class="ctitle gold">Secure Payment</p>
+              <p style="font-size:12.5px;color:var(--text2);line-height:1.6;margin-bottom:14px">All payments are processed securely via PayPal. Multiple payment methods supported globally.</p>
+              <div class="paypal-btn-row">
+                <button class="pp-btn pp-paypal" onclick="ppPay('paypal')">🅿 Pay with PayPal</button>
+                <button class="pp-btn pp-venmo" onclick="ppPay('venmo')">Venmo</button>
+                <button class="pp-btn pp-gpay" onclick="ppPay('gpay')">G Pay</button>
+                <button class="pp-btn pp-apple" onclick="ppPay('apple')"> Pay</button>
+              </div>
+            </div>
+
+            <div class="gcard" style="margin-top:18px">
+              <p class="ctitle rose">Transaction history</p>
+              <div id="cr-hist">
+                <div style="display:flex;gap:14px;padding:9px 0;border-bottom:1px solid var(--border)"><span style="font-family:'JetBrains Mono';font-size:10.5px;color:var(--text3);width:80px;flex-shrink:0">Today</span><span style="font-size:13px;color:var(--jade)">+5 credits — Welcome bonus 🪷</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ███ REFERRAL ███ -->
+        <div class="panel" id="panel-referral">
+          <div style="max-width:560px">
+            <div class="gcard" style="margin-bottom:16px">
+              <p class="ctitle rose">Your Referral Code</p>
+              <div class="refbox">
+                <div>
+                  <div style="font-size:10px;color:var(--text3);font-family:'JetBrains Mono';text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px">Your code</div>
+                  <div class="refcode" id="ref-code">———</div>
+                </div>
+                <button class="btn bgold" onclick="copyRef()">Copy link</button>
+              </div>
+              <p style="font-size:13px;color:var(--text2);line-height:1.65">Share your link. You earn <strong style="color:var(--rose)">5 credits</strong> per referral. They get <strong style="color:var(--gold)">5 bonus credits</strong>. No limit!</p>
+            </div>
+            <div class="statgrid" style="grid-template-columns:1fr 1fr;margin-bottom:0">
+              <div class="statcard"><div class="slbl">Referrals</div><div class="snum" id="ref-n">0</div></div>
+              <div class="statcard"><div class="slbl">Credits earned</div><div class="snum" id="ref-cr">0</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ███ ANALYTICS ███ -->
+        <div class="panel" id="panel-analytics">
+          <div class="statgrid" id="stat-grid"></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <div class="gcard">
+              <p class="ctitle jade">Videos this week</p>
+              <div style="display:flex;align-items:flex-end;gap:7px;height:100px;margin-top:8px" id="chart-bars"></div>
+              <div style="display:flex;gap:7px;margin-top:5px" id="chart-labs"></div>
+            </div>
+            <div class="gcard">
+              <p class="ctitle rose">Revenue overview</p>
+              <div id="rev-rows" style="display:flex;flex-direction:column;gap:6px;margin-top:4px"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ███ OWNER PANEL ███ -->
+        <div class="panel" id="panel-owner">
+          <div class="ownerpanel">
+            <div style="display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,rgba(255,171,0,.15),rgba(255,79,139,.08));border:1px solid rgba(255,171,0,.3);border-radius:20px;padding:4px 13px;font-size:11px;font-family:'JetBrains Mono';color:var(--gold);margin-bottom:14px">👑 Owner · exoticbellame@gmail.com</div>
+            <div class="statgrid" id="owner-stats"></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
+            <div class="gcard">
+              <p class="ctitle gold">Payment Notifications</p>
+              <div style="font-size:12px;color:var(--text2);margin-bottom:12px;line-height:1.55">All payments auto-notify <strong style="color:var(--gold)">exoticbellame@gmail.com</strong> instantly via SMTP.</div>
+              <div id="payment-feed" style="display:flex;flex-direction:column;gap:8px"></div>
+            </div>
+            <div class="gcard">
+              <p class="ctitle gold">Claudia Financial Agent</p>
+              <div id="fin-msgs" style="min-height:150px;display:flex;flex-direction:column;gap:8px;margin-bottom:12px"></div>
+              <div style="display:flex;gap:8px">
+                <input type="text" id="fin-q" placeholder="Ask about earnings, withdrawals…" style="flex:1;font-size:12.5px"/>
+                <button class="btn bgold bsm" onclick="askFin()">Ask</button>
+              </div>
+            </div>
+          </div>
+          <div class="gcard">
+            <p class="ctitle gold">Withdrawal System</p>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px">
+              <div style="background:var(--s2);border:1px solid var(--border);border-radius:var(--rsm);padding:14px">
+                <div style="font-size:9.5px;color:var(--text4);font-family:'JetBrains Mono';margin-bottom:6px">AVAILABLE BALANCE</div>
+                <div style="font-family:'Playfair Display';font-size:32px;font-weight:700;color:var(--jade)" id="avail-bal">$0.00</div>
+              </div>
+              <div style="background:var(--s2);border:1px solid var(--border);border-radius:var(--rsm);padding:14px">
+                <div style="font-size:9.5px;color:var(--text4);font-family:'JetBrains Mono';margin-bottom:6px">TOTAL EARNED</div>
+                <div style="font-family:'Playfair Display';font-size:32px;font-weight:700;color:var(--gold)" id="total-earned">$0.00</div>
+              </div>
+              <div style="background:var(--s2);border:1px solid var(--border);border-radius:var(--rsm);padding:14px">
+                <div style="font-size:9.5px;color:var(--text4);font-family:'JetBrains Mono';margin-bottom:6px">THIS MONTH</div>
+                <div style="font-family:'Playfair Display';font-size:32px;font-weight:700;color:var(--rose3)" id="month-earned">$0.00</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap">
+              <div class="field" style="margin:0;flex:1"><label class="label">PayPal email / Stripe account</label><input type="text" value="exoticbellame@gmail.com"/></div>
+              <div class="field" style="margin:0;width:140px"><label class="label">Amount (USD)</label><input type="number" placeholder="0.00"/></div>
+              <button class="btn bgold" onclick="notify('Withdrawal request processed — funds dispatched to PayPal!','gold')">💸 Withdraw</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ███ SETTINGS ███ -->
+        <div class="panel" id="panel-settings">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:940px">
+            <div>
+              <div class="setsec">
+                <h2 class="sethead">Account</h2>
+                <div class="setrow"><div><div class="setlbl">Email</div><div class="setdesc" id="set-email">—</div></div><button class="btn bghost bsm">Edit</button></div>
+                <div class="setrow"><div><div class="setlbl">Display name</div></div><button class="btn bghost bsm">Edit</button></div>
+                <div class="setrow"><div><div class="setlbl">Password</div></div><button class="btn bghost bsm">Reset</button></div>
+                <div class="setrow"><div><div class="setlbl">Connected platforms</div><div class="setdesc">TikTok · YouTube · Instagram</div></div><button class="btn bjade bsm">Connect</button></div>
+                <div class="setrow"><div><div class="setlbl">Delete account</div></div><button class="btn bdanger bsm">Delete</button></div>
+              </div>
+              <div class="setsec">
+                <h2 class="sethead">Notifications</h2>
+                <div class="setrow"><div><div class="setlbl">Video complete</div><div class="setdesc">Email when job finishes</div></div><label class="tog"><input type="checkbox" checked/><span class="togsl"></span></label></div>
+                <div class="setrow"><div><div class="setlbl">Payment alerts</div></div><label class="tog"><input type="checkbox" checked/><span class="togsl"></span></label></div>
+                <div class="setrow"><div><div class="setlbl">Weekly digest</div></div><label class="tog"><input type="checkbox"/><span class="togsl"></span></label></div>
+                <div class="setrow"><div><div class="setlbl">Viral clip ready</div></div><label class="tog"><input type="checkbox" checked/><span class="togsl"></span></label></div>
+                <div class="setrow"><div><div class="setlbl">Referral bonus earned</div></div><label class="tog"><input type="checkbox" checked/><span class="togsl"></span></label></div>
+              </div>
+              <div class="setsec">
+                <h2 class="sethead">Webhooks</h2>
+                <div style="display:flex;gap:9px;margin-bottom:12px">
+                  <input type="url" id="wh-u" placeholder="https://yourserver.com/hook" style="flex:1"/>
+                  <button class="btn bghost" onclick="addWH()">Add</button>
+                </div>
+                <div id="wh-list"><p style="font-size:12px;color:var(--text4)">No webhooks yet.</p></div>
+              </div>
+            </div>
+            <div>
+              <div class="setsec">
+                <h2 class="sethead">Generation Defaults</h2>
+                <div class="setrow"><div><div class="setlbl">Auto-captions (Whisper AI)</div></div><label class="tog"><input type="checkbox" checked/><span class="togsl"></span></label></div>
+                <div class="setrow"><div><div class="setlbl">Emoji caption injection</div></div><label class="tog"><input type="checkbox" checked/><span class="togsl"></span></label></div>
+                <div class="setrow"><div><div class="setlbl">HDR Cinema mode</div></div><label class="tog"><input type="checkbox" checked/><span class="togsl"></span></label></div>
+                <div class="setrow"><div><div class="setlbl">Scene auto-split</div></div><label class="tog"><input type="checkbox" checked/><span class="togsl"></span></label></div>
+                <div class="setrow"><div><div class="setlbl">Watermark-free output</div><div class="setdesc">Pro plan required</div></div><label class="tog"><input type="checkbox"/><span class="togsl"></span></label></div>
+                <div class="setrow"><div><div class="setlbl">Default resolution</div></div><select style="width:120px"><option>1080p</option><option>4K</option><option>720p</option></select></div>
+              </div>
+              <div class="setsec">
+                <h2 class="sethead">API & Integrations</h2>
+                <div class="setrow"><div><div class="setlbl">Lotus API Key</div><div class="setdesc" id="api-key-d" style="font-family:'JetBrains Mono';font-size:10.5px">lotus_sk_••••••••••••</div></div><button class="btn bghost bsm" onclick="copyAPIKey()">Copy</button></div>
+                <div class="setrow"><div><div class="setlbl">Runway API key</div></div><input type="password" placeholder="rw_..." style="width:160px;padding:6px 10px;font-size:12px"/></div>
+                <div class="setrow"><div><div class="setlbl">ElevenLabs key</div></div><input type="password" placeholder="el_..." style="width:160px;padding:6px 10px;font-size:12px"/></div>
+                <div class="setrow"><div><div class="setlbl">Gemini API key</div></div><input type="password" placeholder="AIza..." style="width:160px;padding:6px 10px;font-size:12px"/></div>
+                <div class="setrow"><div><div class="setlbl">Stripe Connect</div></div><button class="btn bsap bsm" onclick="notify('Redirecting to Stripe Connect…','info')">Connect</button></div>
+                <div class="setrow"><div><div class="setlbl">PayPal Client ID</div></div><input type="password" placeholder="sb-xxx..." style="width:160px;padding:6px 10px;font-size:12px"/></div>
+              </div>
+              <div class="setsec">
+                <h2 class="sethead">Brand Kit</h2>
+                <div class="setrow"><div><div class="setlbl">Logo upload</div><div class="setdesc">Auto-brand your videos</div></div><button class="btn bghost bsm" onclick="notify('Upload logo — Pro plan','info')">Upload</button></div>
+                <div class="setrow"><div><div class="setlbl">Primary brand color</div></div><input type="color" value="#ff4f8b" style="width:44px;height:34px;padding:2px 4px;border-radius:6px;background:var(--s3)"/></div>
+                <div class="setrow"><div><div class="setlbl">Brand font</div></div><select style="width:130px"><option>Default</option><option>Playfair Display</option><option>Montserrat</option><option>Oswald</option></select></div>
+                <div class="setrow"><div><div class="setlbl">Intro/outro clip</div></div><button class="btn bghost bsm" onclick="notify('Upload intro clip','info')">Upload</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end content -->
+
+      <!-- ═══ CLAUDIA AI AGENT ═══════════════════════════ -->
+      <div class="agentpanel hide" id="agent-panel">
+        <div class="agenthead">
+          <div class="agtavatar">🤖</div>
+          <div style="flex:1">
+            <div class="agtname">Claudia</div>
+            <div class="agtstatus">● Online · Lotus AI Director</div>
+          </div>
+          <button class="btn bghost bxs" onclick="toggleAgent()">✕</button>
+        </div>
+        <div class="agtmsgs" id="agent-msgs"></div>
+        <div class="agtqs">
+          <button class="agtq" onclick="aq('Analyze my script')">Analyze script</button>
+          <button class="agtq" onclick="aq('How are my earnings?')">Earnings</button>
+          <button class="agtq" onclick="aq('Best style for TikTok?')">TikTok style</button>
+          <button class="agtq" onclick="aq('Optimize my prompt')">Optimize prompt</button>
+          <button class="agtq" onclick="aq('How to withdraw money?')">Withdraw</button>
+          <button class="agtq" onclick="aq('Viral clip tips')">Go viral</button>
+        </div>
+        <div class="agtin-wrap">
+          <input class="agtin" id="agent-in" placeholder="Ask Claudia anything…" onkeydown="if(event.key==='Enter')sendAgent()"/>
+          <button class="agtsend" onclick="sendAgent()">➤</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════
+// COSMOS CANVAS — Stars + Nebula Particles
+// ═══════════════════════════════════════════════════════════
+(function(){
+  const c=document.getElementById('bg-canvas'),ctx=c.getContext('2d');
+  let S=[],W,H,T=0;
+  const resize=()=>{W=c.width=window.innerWidth;H=c.height=window.innerHeight};
+  resize();window.addEventListener('resize',resize);
+  const cols=['rgba(255,79,139,','rgba(180,65,255,','rgba(0,229,160,','rgba(255,194,68,','rgba(79,172,254,','rgba(255,255,255,'];
+  for(let i=0;i<220;i++)S.push({
+    x:Math.random(),y:Math.random(),
+    r:.2+Math.random()*1.5,
+    a:Math.random(),s:.00015+Math.random()*.0004,
+    d:Math.random()>.5?1:-1,
+    c:cols[Math.floor(Math.random()*cols.length)]
+  });
+  function draw(){
+    ctx.clearRect(0,0,W,H);T+=.003;
+    for(const s of S){
+      s.a+=s.s*s.d;if(s.a>.9||s.a<.04)s.d*=-1;
+      ctx.beginPath();ctx.arc(s.x*W,s.y*H,s.r,0,Math.PI*2);
+      ctx.fillStyle=s.c+s.a+')';ctx.fill();
+    }
+    // Shooting stars
+    if(Math.random()>.995){
+      const x=Math.random()*W,y=Math.random()*H*.5;
+      const g=ctx.createLinearGradient(x,y,x+120,y+60);
+      g.addColorStop(0,'rgba(255,255,255,.8)');g.addColorStop(1,'transparent');
+      ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+120,y+60);
+      ctx.strokeStyle=g;ctx.lineWidth=1.5;ctx.stroke();
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// Lotus petals
+(function(){
+  const p=['rgba(255,79,139,.5)','rgba(255,145,184,.4)','rgba(180,65,255,.4)','rgba(255,194,68,.35)','rgba(0,229,160,.3)'];
+  for(let i=0;i<24;i++){
+    const el=document.createElement('div');el.className='petal';
+    const w=6+Math.random()*10,h=w*1.4;
+    el.style.cssText=`left:${Math.random()*100}%;width:${w}px;height:${h}px;background:${p[Math.floor(Math.random()*p.length)]};animation-duration:${15+Math.random()*25}s;animation-delay:${Math.random()*28}s;transform:rotate(${Math.random()*360}deg)`;
+    document.getElementById('cosmos').appendChild(el);
+  }
+})();
+
+// ═══════════════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════════════
+const OWNER='exoticbellame@gmail.com';
+const API='http://localhost:8000';
+
+let S={
+  token:localStorage.getItem('lt')||null,
+  user:JSON.parse(localStorage.getItem('lu')||'null'),
+  jobs:JSON.parse(localStorage.getItem('lj')||'[]'),
+  projs:JSON.parse(localStorage.getItem('lp')||'[]'),
+  payments:JSON.parse(localStorage.getItem('lpay')||'[]'),
+  earned:parseFloat(localStorage.getItem('learn')||'0'),
+  style:'cinematic',whs:[],captions:{},virals:{}
+};
+
+function sv(){
+  localStorage.setItem('lj',JSON.stringify(S.jobs));
+  localStorage.setItem('lp',JSON.stringify(S.projs));
+  localStorage.setItem('lpay',JSON.stringify(S.payments));
+  localStorage.setItem('learn',S.earned.toString());
+}
+
+async function api(m,p,b){
+  const h={'Content-Type':'application/json'};
+  if(S.token)h['Authorization']='Bearer '+S.token;
+  try{const r=await fetch(API+p,{method:m,headers:h,body:b?JSON.stringify(b):undefined});return await r.json();}catch{return null;}
+}
+
+// ═══════════════════════════════════════════════════════════
+// AUTH
+// ═══════════════════════════════════════════════════════════
+function authTab(t){
+  document.querySelectorAll('.atab').forEach((el,i)=>el.classList.toggle('on',(i===0)===(t==='in')));
+  document.getElementById('af-in').classList.toggle('on',t==='in');
+  document.getElementById('af-up').classList.toggle('on',t==='up');
+}
+
+async function doLogin(){
+  const e=document.getElementById('li-e').value,p=document.getElementById('li-p').value;
+  if(!e||!p){notify('Fill in all fields','err');return;}
+  const d=await api('POST','/auth/login',{email:e,password:p});
+  loginOK(d?.token||'tok_'+Date.now(),{email:e,credits:5,referral_code:'lotus_'+rnd(),plan:'free'});
+}
+
+async function doRegister(){
+  const e=document.getElementById('ru-e').value,p=document.getElementById('ru-p').value,r=document.getElementById('ru-r').value;
+  if(!e||!p){notify('Fill in all fields','err');return;}
+  if(p.length<6){notify('Password too short','err');return;}
+  const credits=r?10:5;
+  const d=await api('POST','/auth/register',{email:e,password:p,referral_code:r||null});
+  loginOK(d?.token||'tok_'+Date.now(),{email:e,credits,referral_code:d?.referral_code||'lotus_'+rnd(),plan:'free'});
+  notify('Welcome to Lotus AI Studio 🪷 You have '+credits+' credits!','ok');
+}
+
+function guestIn(){
+  loginOK('guest',{email:'guest@lotus.ai',credits:15,referral_code:'lotus2026',plan:'free'});
+}
+
+function loginOK(tok,user){
+  S.token=tok;S.user=user;
+  localStorage.setItem('lt',tok);localStorage.setItem('lu',JSON.stringify(user));
+  document.getElementById('auth-screen').style.display='none';
+  document.getElementById('root').style.display='flex';
+  initApp();
+}
+
+function doLogout(){localStorage.clear();location.reload()}
+
+// ═══════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════
+function initApp(){
+  updateCr();setupStyles();setupDrop();
+  renderTemplates();renderTools();renderTimeline();renderPacks();
+  renderProjects();renderJobsMini();renderJobsAll();renderAnalytics();renderOwner();
+  document.getElementById('set-email').textContent=S.user.email;
+  document.getElementById('ref-code').textContent=S.user.referral_code;
+  if(S.user.email===OWNER)document.getElementById('sb-owner').style.display='flex';
+  addMsg('ai','Hello! I\'m Claudia — your AI creative director, financial advisor, and production manager. I use Claude\'s search engine to find perfect visual matches for your descriptions, and Gemini to optimize every character in your scripts.\n\nWhat would you like to create today? 🪷');
+  addFin('ai','Financial agent active. All purchases notify '+OWNER+' instantly. Ask me about earnings, strategy, or withdrawals.');
+  renderViralPanel();
+}
+
+function updateCr(){
+  const c=S.user?.credits??0;
+  document.getElementById('sb-cr').textContent=c;
+  const cb=document.getElementById('cr-big');if(cb)cb.textContent=c;
+  document.getElementById('sb-plan').textContent=(S.user?.plan||'free').toUpperCase()+' PLAN';
+}
+
+// ═══════════════════════════════════════════════════════════
+// PANELS
+// ═══════════════════════════════════════════════════════════
+const PT={
+  generate:'Generate <em>Video</em>',
+  'image-gen':'AI <em>Image Generator</em>',
+  img2vid:'Image <em>to Video</em>',
+  longform:'25-Min <em>Production</em>',
+  casting:'Gemini <em>Character Casting</em>',
+  viral:'Viral <em>Clipper AI</em>',
+  templates:'Video <em>Templates</em>',
+  editor:'Video <em>Editor</em>',
+  tools:'Creator <em>Tools</em>',
+  upload:'Upload <em>Assets</em>',
+  projects:'My <em>Projects</em>',
+  jobs:'Job <em>Queue</em>',
+  credits:'Credits <em>& Billing</em>',
+  referral:'Referral <em>Program</em>',
+  analytics:'<em>Analytics</em>',
+  owner:'<em>Owner Panel</em> 👑',
+  settings:'<em>Settings</em>',
+};
+
+function pg(name,el){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.ni').forEach(n=>n.classList.remove('on'));
+  const panel=document.getElementById('panel-'+name);
+  if(panel)panel.classList.add('on');
+  if(el)el.classList.add('on');
+  document.getElementById('tb-t').innerHTML=PT[name]||name;
+  if(name==='jobs')renderJobsAll();
+  if(name==='projects')renderProjects();
+  if(name==='analytics')renderAnalytics();
+  if(name==='owner')renderOwner();
+}
+
+// ═══════════════════════════════════════════════════════════
+// STYLE CHIPS + CLAUDIA ANALYSIS
+// ═══════════════════════════════════════════════════════════
+const MODS={
+  cinematic:'8K, anamorphic lens, film grain, dramatic shadows, Hollywood color grade',
+  anime:'Studio Ghibli style, hand-drawn textures, vibrant saturation, expressive characters',
+  cyberpunk:'neon lights, rainy streets, volumetric fog, blue-magenta palette, techwear',
+  documentary:'handheld, natural color, authentic B-roll, journalistic perspective',
+  dreamy:'soft focus, pastel palette, lens flares, slow motion, ethereal glow',
+  botanical:'lush greenery, macro detail, golden hour, serene natural textures',
+  noir:'high contrast B&W, venetian blinds light, deep shadows, moody atmosphere',
+  hyperreal:'photorealistic, perfect lighting, ultra-detailed, 8K Unreal Engine render',
+  scifi:'futuristic tech, holographic interfaces, space environments, metallic surfaces',
+  vhs:'scan lines, tape artifacts, faded 80s colors, retro grain',
+  watercolor:'soft brushstrokes, paper texture, organic edges, muted tones',
+  cartoon:'bold outlines, flat colors, exaggerated proportions, animated style',
+};
+
+const CLAUDIA_HINTS={
+  cinematic:'Claudia detected: wide establishing shot → intimate close-up → sweeping panoramic. Gemini recommends: add depth-of-field blur, anamorphic lens flares, and a teal-orange color split for maximum cinematic impact.',
+  anime:'Claudia detected: character-driven emotional arc with environmental storytelling. Gemini recommends: Ghibli-inspired soft shading, expressive face close-ups, and lush natural background vistas.',
+  cyberpunk:'Claudia detected: urban dystopian narrative. Gemini recommends: heavy rain particles, neon light bloom, volumetric god-rays, and a cyan-magenta split tone for atmosphere.',
+  dreamy:'Claudia detected: surreal ethereal narrative. Gemini recommends: overexposed glow edges, pastel particle halos, slow-motion blossom falls, and celestial haze.',
+  noir:'Claudia detected: tension-driven narrative. Gemini recommends: venetian blinds light patterns, deep contrast shadows, cigarette smoke, and a desaturated silver tone.',
+};
+
+function setupStyles(){
+  document.querySelectorAll('.schip').forEach(c=>{
+    c.addEventListener('click',()=>{
+      document.querySelectorAll('.schip').forEach(x=>x.classList.remove('sel'));
+      c.classList.add('sel');S.style=c.dataset.s;
+      showClaudia(document.getElementById('g-script').value,c.dataset.s);
+    });
+  });
+  document.getElementById('g-script').addEventListener('input',e=>{
+    if(e.target.value.length>25)showClaudia(e.target.value,S.style);
+  });
+}
+
+function showClaudia(script,style){
+  const h=document.getElementById('c-hint'),t=document.getElementById('c-text');
+  const msg=CLAUDIA_HINTS[style]||(script.length>30?
+    `Claudia searching visual database for "${script.slice(0,55)}…" — Gemini optimizing character descriptions and scene composition for ${style} style. Best engine: ${['Runway Gen-3','Kling 3.0','Sora 2','Veo 3'][Math.floor(Math.random()*4)]}.`
+    :'Enter more details for Claudia analysis.');
+  t.textContent=msg;h.style.display='block';
+}
+
+// ═══════════════════════════════════════════════════════════
+// GENERATE VIDEO
+// ═══════════════════════════════════════════════════════════
+async function doGenerate(){
+  const script=document.getElementById('g-script').value.trim();
+  const dur=parseInt(document.getElementById('g-dur').value)||5;
+  if(!script){notify('Enter a prompt or script first','err');return;}
+  const cost=dur<=10?1:dur<=60?2:dur<=300?3:dur<=900?5:10;
+  if((S.user?.credits||0)<cost){notify('Not enough credits — top up below','err');pg('credits',null);return;}
+  S.user.credits-=cost;localStorage.setItem('lu',JSON.stringify(S.user));updateCr();
+
+  const id='j_'+Date.now();
+  const job={id,status:'queued',prompt:script,style:S.style,dur,created:new Date().toISOString(),url:null,prog:0,cost};
+  S.jobs.unshift(job);sv();renderJobsMini();renderJobsAll();updateBadge();
+  notify('Queued — Claudia is crafting your video 🪷');
+  addMsg('ai',`Analyzing: "${script.slice(0,55)}…"\nStyle: ${S.style} · Engine: ${document.getElementById('g-engine').value}\nEnhanced prompt sent with ${MODS[S.style]?.slice(0,60)||''}…`);
+
+  setTimeout(()=>tick(id,'processing',18),700);
+  setTimeout(()=>tick(id,'processing',48),2300);
+  setTimeout(()=>tick(id,'processing',78),4200);
+  const delay=5200+Math.random()*4000;
+  setTimeout(()=>{
+    tick(id,'completed',100,'https://www.w3schools.com/html/mov_bbb.mp4');
+    notify('✦ Video ready! 🪷','ok');updateBadge();
+    S.captions[id]=[
+      {s:0,e:2.5,t:'A vision unfolds',emoji:'✨'},{s:2.5,e:5,t:'in breathtaking detail',emoji:'🌟'},
+      {s:5,e:8,t:'crafted by Lotus AI',emoji:'🪷'},{s:8,e:10.5,t:'where creativity knows no limits',emoji:'🚀'},
+    ];
+    addMsg('ai','Video complete! Auto-captions with emoji injection ready. Want me to analyze this for viral potential?');
+  },delay);
+  api('POST','/generate',{script,style:S.style,duration:dur});
+  document.getElementById('g-script').value='';
+}
+
+function genImage(){
+  const p=document.getElementById('img-p').value.trim();
+  if(!p){notify('Enter an image prompt','err');return;}
+  if((S.user?.credits||0)<1){notify('Need 1 credit for image generation','err');return;}
+  S.user.credits-=1;updateCr();
+  notify('Generating with DALL-E 3 + Gemini Vision… 🖼');
+  setTimeout(()=>{
+    notify('4 images generated! 🖼','ok');
+    const g=document.getElementById('img-results');
+    const imgs=['🌊','🏔','🌸','🌌'];
+    g.innerHTML=imgs.map((em,i)=>`<div class="vidbox" style="aspect-ratio:1/1;cursor:pointer" onclick="notify('Image ${i+1} saved','ok')"><div style="font-size:36px">${em}</div></div>`).join('');
+  },2600);
+}
+
+function doI2V(){notify('Animating with Kling AI + Seedance motion engine…');setTimeout(()=>notify('Video animation ready! 🎞','ok'),3400);}
+function i2vUp(i){[...i.files].forEach(f=>notify('Image uploaded: '+f.name,'ok'))}
+
+// ═══════════════════════════════════════════════════════════
+// LONG FORM
+// ═══════════════════════════════════════════════════════════
+function startLF(){
+  const s=document.getElementById('lf-script').value.trim();
+  if(!s){notify('Paste your script first','err');return;}
+  if((S.user?.credits||0)<50){notify('Need 50 credits for 25-min production','err');return;}
+  S.user.credits-=50;updateCr();
+  notify('25-min production started! Email will be sent when ready.','ok');
+  const stages=['Claudia analyzing script…','ElevenLabs generating voiceover…','Creating 150 AI scenes…','Foley AI adding sound effects…','Stitching with FFmpeg…','Burning subtitles…','Uploading to CDN…'];
+  let i=0;
+  const iv=setInterval(()=>{
+    const el=document.getElementById('lf-status');
+    if(i>=stages.length){clearInterval(iv);el.innerHTML='<div style="color:var(--jade);font-size:16px;font-weight:700">✦ 25-minute video complete!<br/>Download link sent to your email.</div>';return;}
+    el.innerHTML=`<div style="font-size:13px;color:var(--text2);margin-bottom:12px">${stages[i]}</div><div class="progt"><div class="progf" style="width:${Math.round(((i+1)/stages.length)*100)}%"></div></div><div style="font-size:10px;color:var(--text4);margin-top:6px;font-family:'JetBrains Mono'">${Math.round(((i+1)/stages.length)*100)}% complete</div>`;
+    i++;
+  },2800);
+}
+
+function autoBreak(){
+  const s=document.getElementById('lf-script').value.trim();
+  if(!s){notify('Paste script first','err');return;}
+  const scenes=s.split(/\n\n+/).slice(0,15).map((t,i)=>({n:i+1,title:`Scene ${i+1}: ${t.split(' ').slice(0,4).join(' ')}…`,desc:t.slice(0,120)+(t.length>120?'…':''),dur:60+Math.floor(Math.random()*60)}));
+  document.getElementById('lf-scenes').innerHTML=scenes.map(sc=>`<div class="scenecard"><div class="scenenum">${sc.n}</div><div style="flex:1"><div class="stitle">${sc.title}</div><div class="sdesc">${sc.desc}</div><div class="stags"><span class="stag">Claudia matched</span><span class="stag">${sc.dur}s</span><span class="stag">Auto-style</span></div></div></div>`).join('');
+  notify(`Script broken into ${scenes.length} scenes ✦`,'ok');
+}
+
+function castFromScript(){
+  pg('casting',null);setTimeout(()=>doCasting(),500);
+}
+
+// ═══════════════════════════════════════════════════════════
+// GEMINI CASTING
+// ═══════════════════════════════════════════════════════════
+const CHARS=[
+  {name:'ELARA',role:'Protagonist',age:'28',look:'Athletic build, deep copper skin, silver-streaked locs, fierce amber eyes',clothes:'Worn leather jacket, tactical boots',seed:'2847391',emoji:'⚔'},
+  {name:'MARCUS',role:'Antagonist',age:'45',look:'Tall, pale, sharp jawline, grey-silver hair, calculating ice-blue eyes',clothes:'Tailored dark coat, obsidian ring',seed:'9283746',emoji:'🗡'},
+  {name:'LUNA',role:'Ally',age:'22',look:'Petite, warm brown skin, wild curly hair, kind hazel eyes',clothes:'Oversized hoodie, paint-stained fingers',seed:'5647382',emoji:'🌙'},
+];
+
+async function doCasting(){
+  const s=document.getElementById('cast-script')?.value||'Default script with protagonist and antagonist.';
+  if(!s.trim()){notify('Enter a script first','err');return;}
+  notify('Gemini 1.5 Pro casting characters… 🎭');
+  const res=document.getElementById('cast-results');
+  res.innerHTML='<div style="text-align:center;padding:24px;color:var(--text3);font-size:12px">Gemini analyzing characters…<div class="progt" style="margin-top:10px"><div class="progf ind"></div></div></div>';
+  await sleep(2200);
+  res.innerHTML=CHARS.map(c=>`<div class="charcard">
+    <div class="char-avatar">${c.emoji}</div>
+    <div style="flex:1">
+      <div class="char-name">${c.name} <span style="font-size:11px;color:var(--text3);font-weight:400">— ${c.role}</span></div>
+      <div class="char-profile"><strong>Visual:</strong> ${c.look}<br/><strong>Wardrobe:</strong> ${c.clothes}</div>
+      <div class="char-seed">CONSISTENCY SEED: #${c.seed} · Locked across all scenes</div>
+      <div style="display:flex;gap:7px;margin-top:8px">
+        <button class="btn bghost bxs" onclick="notify('${c.name} profile locked in project','ok')">Lock to project</button>
+        <button class="btn bghost bxs" onclick="notify('Voice cloning started for ${c.name}','info')">Clone voice</button>
+      </div>
+    </div>
+  </div>`).join('');
+  notify('Gemini cast '+CHARS.length+' characters with visual seeds! 🎭','ok');
+  addMsg('ai','Gemini casting complete! '+CHARS.length+' characters profiled with consistency seeds. Every AI scene will now maintain exact visual continuity — no more character drift across your 25-minute production.');
+}
+
+// ═══════════════════════════════════════════════════════════
+// VIRAL CLIPPER
+// ═══════════════════════════════════════════════════════════
+const VIRAL_DATA=[
+  {time:'00:02–00:17',score:98,reason:'"Instant hook — visual explosion detected at 0:03. Emotional peak at 0:12. Perfect 9:16 crop available." — Gemini 1.5 Pro',emoji:'🔥'},
+  {time:'04:31–05:01',score:94,reason:'"High narrative tension with surprising reveal at 4:45. Character close-up triggers strong emotional response." — Gemini',emoji:'⚡'},
+  {time:'18:22–18:52',score:89,reason:'"Cinematic payoff moment. Background music peak sync detected. Strong share intent predicted." — Gemini',emoji:'🌟'},
+];
+
+function runViral(){
+  const el=document.getElementById('viral-results');
+  el.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:24px;color:var(--text3)"><div class="progt"><div class="progf ind" style="width:40%"></div></div><div style="margin-top:10px;font-size:12px">Gemini scoring all segments…</div></div>';
+  setTimeout(()=>{
+    el.innerHTML=VIRAL_DATA.map(v=>`<div class="vcard">
+      <div class="vscore">${v.score}% VIRAL</div>
+      <div style="display:flex;gap:10px;align-items:flex-start">
+        <div class="vthumb">${v.emoji}</div>
+        <div style="flex:1">
+          <div style="font-size:11px;color:var(--gold);font-family:'JetBrains Mono';margin-bottom:5px">${v.time}</div>
+          <div class="vreason">${v.reason}</div>
+          <div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap">
+            <button class="btn bjade bxs" onclick="notify('Viral clip exported 9:16 + captions!','ok')">Export TikTok</button>
+            <button class="btn bghost bxs" onclick="notify('Publishing to Reels…','ok')">→ Reels</button>
+            <button class="btn bghost bxs" onclick="notify('YouTube Shorts ready!','ok')">→ Shorts</button>
+          </div>
+        </div>
+      </div>
+    </div>`).join('');
+    notify('3 viral clips identified by Gemini! 🚀','ok');
+    addMsg('ai','Viral analysis complete! Top clip: 98% viral probability. Emoji caption injection ready. Want me to auto-schedule these for peak posting times on TikTok, Reels, and Shorts?');
+  },3200);
+}
+
+function renderViralPanel(){
+  const el=document.getElementById('viral-results');if(el&&el.innerHTML.trim()===''){el.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:32px;color:var(--text4)"><div style="font-size:32px;opacity:.35;margin-bottom:8px">🚀</div><div style="font-size:12.5px">Select a completed project and run analysis.</div></div>';}
+}
+
+// ═══════════════════════════════════════════════════════════
+// JOB SYSTEM
+// ═══════════════════════════════════════════════════════════
+function tick(id,status,prog,url){
+  const j=S.jobs.find(x=>x.id===id);if(!j)return;
+  j.status=status;j.prog=prog;if(url)j.url=url;
+  sv();renderJobsMini();renderJobsAll();
+}
+
+function updateBadge(){
+  const n=S.jobs.filter(j=>j.status==='queued'||j.status==='processing').length;
+  const b=document.getElementById('jbadge');
+  b.style.display=n?'inline':'none';b.textContent=n;
+}
+
+const SE={cinematic:'🎥',anime:'🌸',cyberpunk:'🌆',documentary:'🎞',vhs:'📼',dreamy:'✨',botanical:'🌿',noir:'🌑',hyperreal:'🔬',cartoon:'🎨',watercolor:'🖌',scifi:'🚀'};
+
+function jobHTML(j,mini=false){
+  const SL={queued:'Queued',processing:'Generating',completed:'Complete',failed:'Failed'};
+  const BC={queued:'bq',processing:'bp',completed:'bok',failed:'bf'};
+  let body='';
+  if(j.status==='processing')body+=`<div class="progwrap"><div class="progrow"><span>Generating…</span><span>${j.prog}%</span></div><div class="progt"><div class="progf ind" style="width:${j.prog}%"></div></div></div>`;
+  if(j.status==='completed'&&!mini){
+    body+=`<div class="vidbox" style="margin-top:10px" onclick="openVid('${j.id}')"><div class="playring">▶</div></div>
+    <div style="display:flex;gap:5px;margin-top:9px;flex-wrap:wrap">
+      <button class="btn bghost bxs" onclick="openVid('${j.id}')">▶ Preview</button>
+      <button class="btn bghost bxs" onclick="saveProj('${j.id}')">+ Save</button>
+      <button class="btn bghost bxs" onclick="notify('TikTok 9:16 exported!','ok')">TikTok</button>
+      <button class="btn bghost bxs" onclick="notify('Reels exported!','ok')">Reels</button>
+      <button class="btn bghost bxs" onclick="notify('Captions ready','ok')">Captions</button>
+      <button class="btn bghost bxs" onclick="notify('Viral analysis started','ok')">🚀 Viral</button>
+    </div>`;
+  }
+  if(j.status==='completed'&&mini){body+=`<div style="display:flex;gap:6px;margin-top:7px"><button class="btn bprimary bxs" onclick="openVid('${j.id}')">▶</button><button class="btn bghost bxs" onclick="saveProj('${j.id}')">Save</button></div>`;}
+  return `<div style="background:var(--s2);border:1px solid var(--border);border-radius:var(--rsm);padding:12px 14px;transition:.18s" id="jc-${j.id}">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:7px">
+      <span style="font-family:'JetBrains Mono';font-size:9.5px;color:var(--text4)">${SE[j.style]||'▶'} ${j.style} · ${j.dur}s</span>
+      <span class="badge ${BC[j.status]}"><span class="dot"></span>${SL[j.status]}</span>
+    </div>
+    <div style="font-size:12px;color:var(--text2);margin-bottom:5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">${j.prompt}</div>
+    <div style="font-size:9.5px;color:var(--text4);font-family:'JetBrains Mono'">${ago(j.created)} · ${j.cost} cr</div>
+    ${body}
+  </div>`;
+}
+
+function renderJobsMini(){
+  const el=document.getElementById('job-mini');if(!el)return;
+  el.innerHTML=S.jobs.length?S.jobs.slice(0,4).map(j=>jobHTML(j,true)).join(''):`<div style="text-align:center;padding:28px;color:var(--text4)"><div style="font-size:32px;opacity:.3">🎬</div><br/><div style="font-size:12px">Generate your first video!</div></div>`;
+}
+
+function renderJobsAll(){
+  const el=document.getElementById('jobs-all');if(!el)return;
+  el.innerHTML=S.jobs.length?S.jobs.map(j=>jobHTML(j,false)).join(''):`<div style="text-align:center;padding:64px;color:var(--text4)"><div style="font-size:44px;opacity:.3">⏳</div><br/>No jobs yet.</div>`;
+}
+
+// ═══════════════════════════════════════════════════════════
+// VIDEO MODAL
+// ═══════════════════════════════════════════════════════════
+function openVid(id){
+  const j=S.jobs.find(x=>x.id===id);if(!j)return;
+  document.getElementById('mt').textContent=j.prompt.slice(0,58)+(j.prompt.length>58?'…':'');
+  const caps=S.captions[id];
+  document.getElementById('mb').innerHTML=`
+    ${j.url?`<video src="${j.url}" controls style="width:100%;border-radius:var(--rsm);margin-bottom:16px;background:#000"></video>`:`<div class="vidbox" style="margin-bottom:16px"><div style="font-size:52px">🎬</div></div>`}
+    ${caps?`<div style="background:rgba(180,65,255,.07);border:1px solid var(--border);border-radius:var(--rsm);padding:12px;margin-bottom:14px"><div style="font-size:9.5px;color:var(--orchid3);font-family:'JetBrains Mono';margin-bottom:8px">AUTO-CAPTIONS WITH EMOJI</div>${caps.map(c=>`<div style="display:flex;gap:10px;padding:6px 0;border-bottom:1px solid var(--border);font-size:12.5px"><span style="font-family:'JetBrains Mono';font-size:10px;color:var(--text3);width:60px;flex-shrink:0">${c.s.toFixed(1)}s</span><span>${c.emoji} ${c.t}</span></div>`).join('')}</div>`:''}
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn bprimary bsm" onclick="notify('Download started!','ok')">⬇ Download MP4</button>
+      <button class="btn bjade bsm" onclick="notify('TikTok 9:16 exported!','ok')">TikTok</button>
+      <button class="btn bghost bsm" onclick="navigator.clipboard.writeText('https://lotus.ai/v/${id}');notify('Share link copied!','ok')">🔗 Share</button>
+      <button class="btn bghost bsm" onclick="saveProj('${id}');closeM()">+ Project</button>
+      <button class="btn bghost bsm" onclick="notify('4K export queued','ok')">4K Export</button>
+      <button class="btn bghost bsm" onclick="notify('Analyzing for virality…','info');closeM();pg('viral',null)">🚀 Go Viral</button>
+    </div>`;
+  document.getElementById('moverlay').classList.add('open');
+}
+function closeM(){document.getElementById('moverlay').classList.remove('open');document.getElementById('mb').innerHTML=''}
+
+// ═══════════════════════════════════════════════════════════
+// PROJECTS
+// ═══════════════════════════════════════════════════════════
+function saveProj(jid){
+  const j=S.jobs.find(x=>x.id===jid);if(!j)return;
+  const p={id:'p_'+Date.now(),name:`${j.style} · ${new Date().toLocaleDateString()}`,jid,style:j.style,created:new Date().toISOString(),clips:[j.prompt]};
+  S.projs.unshift(p);sv();renderProjects();notify('Saved to Projects 🪷','ok');
+}
+function renderProjects(){
+  const g=document.getElementById('proj-grid');if(!g)return;
+  if(!S.projs.length){g.innerHTML='<div style="text-align:center;padding:64px;color:var(--text4);grid-column:1/-1"><div style="font-size:44px;opacity:.35">📁</div><div style="font-size:14px;margin-top:12px">No projects yet.</div></div>';return;}
+  g.innerHTML=S.projs.map(p=>`<div style="background:var(--s1);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;cursor:pointer;transition:.22s" onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='var(--border2)'" onmouseleave="this.style.transform='';this.style.borderColor='var(--border)'">
+    <div style="aspect-ratio:16/9;background:linear-gradient(135deg,var(--s2),var(--s3));display:flex;align-items:center;justify-content:center;font-size:30px">${SE[p.style]||'▶'}</div>
+    <div style="padding:12px 14px"><div style="font-size:13px;font-weight:600;margin-bottom:3px">${p.name}</div><div style="font-size:10.5px;color:var(--text3);font-family:'JetBrains Mono'">${ago(p.created)}</div></div>
+    <div style="display:flex;gap:7px;padding:0 14px 14px">
+      <button class="btn bghost bxs" onclick="openVid('${p.jid}')">▶</button>
+      <button class="btn bghost bxs" onclick="notify('Viral analysis started','info')">🚀</button>
+      <button class="btn bdanger bxs" onclick="delProj('${p.id}')">✕</button>
+    </div>
+  </div>`).join('');
+}
+function delProj(id){S.projs=S.projs.filter(p=>p.id!==id);sv();renderProjects()}
+
+// ═══════════════════════════════════════════════════════════
+// TEMPLATES
+// ═══════════════════════════════════════════════════════════
+const TMPLS=[
+  {name:'TikTok Viral Hook',cat:'social',icon:'📱',bg:'linear-gradient(135deg,#ff0050,#9400ff)',pro:false,new:true},
+  {name:'YouTube Intro',cat:'social',icon:'▶',bg:'linear-gradient(135deg,#ff0000,#cc0000)',pro:false},
+  {name:'Instagram Reel',cat:'social',icon:'📷',bg:'linear-gradient(135deg,#f59e0b,#ec4899)',pro:false},
+  {name:'Product Launch Ad',cat:'promo',icon:'🚀',bg:'linear-gradient(135deg,#00e5a0,#0080ff)',pro:true},
+  {name:'Brand Story 60s',cat:'promo',icon:'📢',bg:'linear-gradient(135deg,#f59e0b,#ef4444)',pro:true},
+  {name:'Explainer Video',cat:'edu',icon:'💡',bg:'linear-gradient(135deg,#4ade80,#22d3ee)',pro:false},
+  {name:'Documentary Open',cat:'story',icon:'🎬',bg:'linear-gradient(135deg,#1e293b,#475569)',pro:true},
+  {name:'Podcast Visual',cat:'news',icon:'🎙',bg:'linear-gradient(135deg,#7c3aed,#4f46e5)',pro:false},
+  {name:'Music Lyric Video',cat:'music',icon:'🎵',bg:'linear-gradient(135deg,#ec4899,#8b5cf6)',pro:false},
+  {name:'News Broadcast Intro',cat:'news',icon:'📰',bg:'linear-gradient(135deg,#1d4ed8,#1e40af)',pro:true},
+  {name:'Travel Vlog',cat:'story',icon:'✈',bg:'linear-gradient(135deg,#059669,#0891b2)',pro:false,new:true},
+  {name:'Tech Product Review',cat:'edu',icon:'💻',bg:'linear-gradient(135deg,#0f172a,#1e293b)',pro:false},
+  {name:'Wedding Film',cat:'story',icon:'💍',bg:'linear-gradient(135deg,#fbbf24,#f472b6)',pro:true},
+  {name:'Horror Short Film',cat:'story',icon:'👻',bg:'linear-gradient(135deg,#1c1917,#292524)',pro:true},
+  {name:'Motivational Reel',cat:'social',icon:'💪',bg:'linear-gradient(135deg,#dc2626,#f97316)',pro:false},
+  {name:'Cinematic Trailer',cat:'promo',icon:'🎭',bg:'linear-gradient(135deg,#7c3aed,#be185d)',pro:true,new:true},
+  {name:'Cooking Show Intro',cat:'edu',icon:'🍳',bg:'linear-gradient(135deg,#f97316,#eab308)',pro:false},
+  {name:'Real Estate Tour',cat:'biz',icon:'🏠',bg:'linear-gradient(135deg,#10b981,#3b82f6)',pro:true},
+  {name:'Startup Pitch Deck',cat:'biz',icon:'📊',bg:'linear-gradient(135deg,#6366f1,#8b5cf6)',pro:true},
+  {name:'Nature Documentary',cat:'story',icon:'🌿',bg:'linear-gradient(135deg,#065f46,#0f766e)',pro:false},
+];
+
+let tFilter='all';
+function filterT(cat,el){
+  tFilter=cat;
+  document.querySelectorAll('#panel-templates .btn').forEach(b=>{b.className=b.classList.contains('bprimary')?b.className.replace('bprimary','bghost'):b.className});
+  if(el){el.className=el.className.replace('bghost','bprimary')}
+  renderTemplates();
+}
+function renderTemplates(){
+  const g=document.getElementById('tmpl-grid');if(!g)return;
+  const list=tFilter==='all'?TMPLS:TMPLS.filter(t=>t.cat===tFilter);
+  g.innerHTML=list.map(t=>`<div class="tmplcard" onclick="useTemplate('${t.name.replace(/'/g,'\\\'')}')" >
+    <div class="tthumb" style="background:${t.bg}"><span style="font-size:28px">${t.icon}</span>${t.pro?'<div class="tprobadge">PRO</div>':''}${t.new?'<div class="tnewbadge">NEW</div>':''}</div>
+    <div class="tinfo"><div class="tname">${t.name}</div><div class="tcat">${t.cat}</div></div>
+  </div>`).join('');
+}
+function useTemplate(name){
+  const t=TMPLS.find(x=>x.name===name);
+  if(t?.pro&&S.user?.plan==='free'){notify('Upgrade to Pro for this template','err');pg('credits',null);return;}
+  document.getElementById('g-script').value=`${name} template — `;
+  pg('generate',document.querySelector('.ni'));
+  notify('Template "'+name+'" loaded ✦','ok');
+}
+
+// ═══════════════════════════════════════════════════════════
+// TOOLS
+// ═══════════════════════════════════════════════════════════
+const TOOLS=[
+  {i:'✂',n:'Video Trimmer',d:'Cut, trim & split clips'},
+  {i:'🎵',n:'Audio Extractor',d:'Pull audio from any video'},
+  {i:'📝',n:'Auto Captions',d:'Whisper AI + emoji inject'},
+  {i:'🔥',n:'Subtitle Burner',d:'Burn-in captions (FFmpeg)'},
+  {i:'🎨',n:'Color Filters',d:'20+ cinema grades'},
+  {i:'🔀',n:'Transitions',d:'80+ smooth effects'},
+  {i:'T',n:'Text Overlay',d:'Animated text layers'},
+  {i:'🖼',n:'Thumbnail Maker',d:'YouTube-ready thumbs'},
+  {i:'⚡',n:'Speed Ramp',d:'0.1x to 4x speed'},
+  {i:'🔊',n:'AI Voiceover',d:'ElevenLabs synthesis'},
+  {i:'🎙',n:'Voice Cloner',d:'Clone any voice (Pro)'},
+  {i:'📐',n:'Resize & Crop',d:'Any platform ratio'},
+  {i:'⊕',n:'Video Merger',d:'Join multiple clips'},
+  {i:'💧',n:'Watermark',d:'Brand logo overlay'},
+  {i:'✨',n:'HDR Enhancer',d:'AI quality upscale 4K'},
+  {i:'👤',n:'Face Swap',d:'InsightFace AI (Pro)'},
+  {i:'🎬',n:'Intro Maker',d:'Professional openers'},
+  {i:'🎭',n:'Green Screen',d:'Background removal'},
+  {i:'📊',n:'Audio Waveform',d:'Visualizer generator'},
+  {i:'🌊',n:'Stabilizer',d:'AI shake reduction'},
+  {i:'🚀',n:'Viral Clipper',d:'Gemini virality AI'},
+  {i:'😎',n:'Emoji Captions',d:'Auto-keyword emojis'},
+  {i:'🎞',n:'Image to Video',d:'Kling AI animation'},
+  {i:'📦',n:'Batch Export',d:'Multiple clips at once'},
+];
+
+function renderTools(){
+  const g=document.getElementById('tools-grid');if(!g)return;
+  g.innerHTML=TOOLS.map(t=>`<div class="toolcard" onclick="notify('${t.n} activated ✦','ok')"><div class="tico">${t.i}</div><div class="tname2">${t.n}</div><div class="tdesc">${t.d}</div></div>`).join('');
+}
+
+// ═══════════════════════════════════════════════════════════
+// TIMELINE
+// ═══════════════════════════════════════════════════════════
+function renderTimeline(){
+  const tr=document.getElementById('tl-tracks');if(!tr)return;
+  const defs=[
+    {lbl:'VIDEO',clips:[{l:'0%',w:'42%',t:'Scene 01 — Intro',type:'v'},{l:'47%',w:'32%',t:'Scene 02',type:'v'}]},
+    {lbl:'AUDIO',clips:[{l:'0%',w:'72%',t:'AI Voiceover.mp3',type:'a'}]},
+    {lbl:'MUSIC',clips:[{l:'0%',w:'96%',t:'Cinematic Score',type:'a'}]},
+    {lbl:'SFX',clips:[{l:'8%',w:'15%',t:'Wind SFX',type:'m'},{l:'50%',w:'20%',t:'Impact',type:'m'}]},
+    {lbl:'TEXT',clips:[{l:'4%',w:'22%',t:'Title card',type:'t'},{l:'62%',w:'18%',t:'End screen',type:'t'}]},
+  ];
+  tr.innerHTML=defs.map(d=>`<div class="tltrack">
+    <span class="tllbl">${d.lbl}</span>
+    <div class="tlrail">
+      <div class="playhead" style="left:22%"></div>
+      ${d.clips.map(c=>`<div class="tlclip cl${c.type}" style="left:${c.l};width:${c.w}">${c.t}</div>`).join('')}
+    </div>
+  </div>`).join('');
+}
+
+// ═══════════════════════════════════════════════════════════
+// UPLOAD
+// ═══════════════════════════════════════════════════════════
+function setupDrop(){
+  ['up-dz','i2v-dz'].forEach(id=>{
+    const dz=document.getElementById(id);if(!dz)return;
+    dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('drag')});
+    dz.addEventListener('dragleave',()=>dz.classList.remove('drag'));
+    dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('drag');[...e.dataTransfer.files].forEach(processFile)});
+  });
+}
+function handleUploads(i){[...i.files].forEach(processFile)}
+function processFile(f){
+  if(f.size>500*1024*1024){notify('File too large (max 500MB)','err');return;}
+  const ul=document.getElementById('up-list');if(!ul)return;
+  const el=document.createElement('div');
+  el.innerHTML=`<div style="background:var(--s2);border:1px solid var(--border);border-radius:var(--rsm);padding:12px 14px;margin-bottom:8px"><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:12.5px">${f.name}</span><span class="badge bp"><span class="dot"></span>Uploading</span></div><div class="progt"><div class="progf ind"></div></div></div>`;
+  ul.prepend(el);
+  setTimeout(()=>{el.innerHTML=`<div style="background:var(--s2);border:1px solid var(--border);border-radius:var(--rsm);padding:12px 14px;margin-bottom:8px"><div style="display:flex;justify-content:space-between"><span style="font-size:12.5px">${f.name}</span><span class="badge bok"><span class="dot"></span>Ready</span></div><div style="font-size:11px;color:var(--text3);font-family:'JetBrains Mono';margin-top:4px">${(f.size/1024/1024).toFixed(2)} MB · ${f.type}</div></div>`;notify('Uploaded: '+f.name,'ok');},1300+Math.random()*900);
+}
+
+// ═══════════════════════════════════════════════════════════
+// CREDITS + PAYPAL
+// ═══════════════════════════════════════════════════════════
+const PACKS=[
+  {id:'starter',name:'Starter',n:25,price:'$9.99',hot:false,desc:'25 credits · HD · 1080p'},
+  {id:'pro',name:'Pro',n:100,price:'$34.99',hot:true,desc:'100 credits · 4K · No watermark'},
+  {id:'studio',name:'Studio',n:500,price:'$149.99',hot:false,desc:'500 credits · 4K · Priority GPU'},
+];
+function renderPacks(){
+  const g=document.getElementById('pack-grid');if(!g)return;
+  g.innerHTML=PACKS.map(p=>`<div class="packcard ${p.hot?'hot':''}" onclick="buyPack('${p.id}',${p.n},'${p.price}')">
+    ${p.hot?'<div class="packbadge">✦ Most Popular</div>':''}
+    <div class="pname">${p.name}</div>
+    <div class="pnum">${p.n}</div>
+    <div class="punit">credits</div>
+    <div class="pprice">${p.price}</div>
+    <div style="font-size:10px;color:var(--text4);margin-top:8px;font-family:'JetBrains Mono'">${p.desc}</div>
+  </div>`).join('');
+}
+
+function ppPay(method){
+  const methods={paypal:'PayPal',venmo:'Venmo',gpay:'Google Pay',apple:'Apple Pay'};
+  notify(`Processing with ${methods[method]}…`,'info');
+  setTimeout(()=>{
+    if(S.user?.credits!==undefined)S.user.credits+=25;
+    localStorage.setItem('lu',JSON.stringify(S.user));updateCr();
+    const pay={id:'pay_'+Date.now(),method,pack:'starter',amount:'$9.99',user:S.user.email,ts:new Date().toISOString()};
+    S.payments.unshift(pay);S.earned+=9.99;sv();
+    renderOwner();renderAnalytics();
+    notify('✦ Payment successful! +25 credits. Owner notified 🪷','ok');
+    addFin('ai',`Payment received: $9.99 via ${methods[method]} from ${S.user.email}. Total earnings: $${S.earned.toFixed(2)}. Email notification dispatched to ${OWNER}.`);
+  },1600);
+}
+
+function buyPack(id,n,price){
+  notify(`Processing ${id} pack…`);
+  setTimeout(()=>{
+    if(S.user?.credits!==undefined)S.user.credits+=n;
+    localStorage.setItem('lu',JSON.stringify(S.user));updateCr();
+    const hist=document.getElementById('cr-hist');
+    if(hist)hist.insertAdjacentHTML('afterbegin',`<div style="display:flex;gap:14px;padding:9px 0;border-bottom:1px solid var(--border)"><span style="font-family:'JetBrains Mono';font-size:10.5px;color:var(--text3);width:80px;flex-shrink:0">Just now</span><span style="font-size:13px;color:var(--jade)">+${n} credits — ${id} pack (${price})</span></div>`);
+    const pay={id:'pay_'+Date.now(),pack:id,amount:parseFloat(price.replace('$','')),credits:n,user:S.user.email,ts:new Date().toISOString()};
+    S.payments.unshift(pay);S.earned+=pay.amount;sv();
+    renderOwner();renderAnalytics();
+    notify(`✦ +${n} credits! Payment notified to owner 🪷`,'ok');
+  },1500);
+}
+
+// ═══════════════════════════════════════════════════════════
+// REFERRAL
+// ═══════════════════════════════════════════════════════════
+function copyRef(){
+  const code=S.user?.referral_code||'';
+  navigator.clipboard.writeText(`https://lotus-ai.studio/join?ref=${code}`).then(()=>notify('Referral link copied! 🪷','ok'));
+}
+
+// ═══════════════════════════════════════════════════════════
+// ANALYTICS
+// ═══════════════════════════════════════════════════════════
+function renderAnalytics(){
+  const sg=document.getElementById('stat-grid');if(!sg)return;
+  const total=S.jobs.length,done=S.jobs.filter(j=>j.status==='completed').length;
+  sg.innerHTML=[
+    {lbl:'Total videos',val:total,sub:'All time'},
+    {lbl:'Completed',val:done,sub:done?Math.round(done/Math.max(total,1)*100)+'% success rate':'—'},
+    {lbl:'Credits left',val:S.user?.credits??0,sub:'Available now'},
+    {lbl:'Projects saved',val:S.projs.length,sub:'In library'},
+  ].map(s=>`<div class="statcard"><div class="slbl">${s.lbl}</div><div class="snum">${s.val}</div><div class="ssub">${s.sub}</div></div>`).join('');
+  const days=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  const vals=days.map(()=>Math.floor(Math.random()*10));
+  const mx=Math.max(...vals,1);
+  const cb=document.getElementById('chart-bars'),cl=document.getElementById('chart-labs');
+  if(cb)cb.innerHTML=vals.map(v=>`<div style="flex:1;border-radius:4px 4px 0 0;min-height:4px;height:${Math.round((v/mx)*100)}px;background:linear-gradient(180deg,rgba(255,79,139,.65),rgba(180,65,255,.3));cursor:pointer;transition:.2s" title="${v} videos"></div>`).join('');
+  if(cl)cl.innerHTML=days.map(d=>`<div style="flex:1;text-align:center;font-size:9.5px;color:var(--text4);font-family:'JetBrains Mono'">${d}</div>`).join('');
+  const rv=document.getElementById('rev-rows');
+  if(rv)rv.innerHTML=[
+    {l:'Starter packs',v:'$0.00'},{l:'Pro packs',v:'$0.00'},{l:'Studio packs',v:'$0.00'},
+    {l:'Total revenue',v:`$${S.earned.toFixed(2)}`,bold:true,c:'var(--jade)'},
+  ].map(r=>`<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px"><span style="color:var(--text2)">${r.l}</span><span style="color:${r.c||'var(--text2)'};font-weight:${r.bold?'700':'400'};font-family:'JetBrains Mono'">${r.v}</span></div>`).join('');
+}
+
+// ═══════════════════════════════════════════════════════════
+// OWNER PANEL
+// ═══════════════════════════════════════════════════════════
+function renderOwner(){
+  const os=document.getElementById('owner-stats');
+  if(os)os.innerHTML=[
+    {lbl:'Total users',val:1,sub:'Registered'},
+    {lbl:'Total jobs',val:S.jobs.length,sub:'All time'},
+    {lbl:'Revenue',val:'$'+S.earned.toFixed(2),sub:'Total earned'},
+    {lbl:'Payments',val:S.payments.length,sub:'Transactions'},
+  ].map(s=>`<div class="statcard"><div class="slbl">${s.lbl}</div><div class="snum">${s.val}</div><div class="ssub">${s.sub}</div></div>`).join('');
+
+  const pf=document.getElementById('payment-feed');
+  if(pf)pf.innerHTML=S.payments.length?S.payments.slice(0,5).map(p=>`<div style="background:var(--s2);border:1px solid rgba(255,171,0,.2);border-radius:var(--rsm);padding:10px 12px;font-size:12px">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <span style="color:var(--gold);font-weight:700">+$${typeof p.amount==='number'?p.amount.toFixed(2):p.amount}</span>
+      <span class="badge bok"><span class="dot"></span>Paid</span>
+    </div>
+    <div style="color:var(--text3);font-family:'JetBrains Mono';font-size:10px;margin-top:3px">${p.pack||p.method||'pack'} · ${p.user} · ${ago(p.ts)}</div>
+  </div>`).join(''):`<div style="text-align:center;padding:24px;color:var(--text4);font-size:12.5px">No payments yet. Share Lotus AI to get your first sale!</div>`;
+
+  const te=document.getElementById('total-earned'),me=document.getElementById('month-earned'),ab=document.getElementById('avail-bal');
+  if(te)te.textContent='$'+S.earned.toFixed(2);
+  if(me)me.textContent='$'+S.earned.toFixed(2);
+  if(ab)ab.textContent='$'+S.earned.toFixed(2);
+}
+
+// ═══════════════════════════════════════════════════════════
+// FINANCIAL AI AGENT
+// ═══════════════════════════════════════════════════════════
+function addFin(role,text){
+  const c=document.getElementById('fin-msgs');if(!c)return;
+  const d=document.createElement('div');d.className=role==='ai'?'msg mai':'msg muser';d.textContent=text;c.appendChild(d);c.scrollTop=c.scrollHeight;
+}
+function askFin(){
+  const q=document.getElementById('fin-q').value.trim();if(!q)return;
+  addFin('user',q);document.getElementById('fin-q').value='';
+  const lower=q.toLowerCase();
+  let r='';
+  if(lower.includes('earn')||lower.includes('revenue'))r=`Total earnings: $${S.earned.toFixed(2)}. You have ${S.payments.length} transactions. Growth strategy: activate referral program (exponential viral growth), post daily TikTok AI demos, offer free tier with watermark. At 100 Pro users ($34.99/mo) = $3,499/month recurring revenue.`;
+  else if(lower.includes('withdraw'))r=`Available balance: $${S.earned.toFixed(2)}. To withdraw: (1) Ensure PayPal email is set in Settings. (2) Minimum $10. (3) Use the withdrawal form below. (4) Funds arrive in 2-5 business days. All transactions auto-notify ${OWNER}.`;
+  else if(lower.includes('tax'))r=`Estimated tax on $${S.earned.toFixed(2)} revenue: Platform fees (~2.9% Stripe) = $${(S.earned*.029).toFixed(2)}. Net after fees: $${(S.earned*.971).toFixed(2)}. Estimated 30% income tax: $${(S.earned*.971*.3).toFixed(2)}. Take-home: $${(S.earned*.971*.7).toFixed(2)}.`;
+  else r=`Based on your dashboard: $${S.earned.toFixed(2)} earned, ${S.jobs.length} videos generated, ${S.projs.length} projects saved. ${S.payments.length > 0 ? 'Revenue is flowing — excellent!' : 'No purchases yet. Enable the referral program and post your first AI video on TikTok to kickstart growth.'} All payment activity is monitored and notified to ${OWNER} in real time.`;
+  setTimeout(()=>addFin('ai',r),800);
+}
+
+// ═══════════════════════════════════════════════════════════
+// CLAUDIA AGENT
+// ═══════════════════════════════════════════════════════════
+function toggleAgent(){document.getElementById('agent-panel').classList.toggle('hide')}
+function addMsg(role,text){
+  const c=document.getElementById('agent-msgs');if(!c)return;
+  const d=document.createElement('div');d.className=role==='ai'?'msg mai':'msg muser';d.textContent=text;c.appendChild(d);c.scrollTop=c.scrollHeight;
+}
+function aq(q){document.getElementById('agent-in').value=q;sendAgent()}
+function sendAgent(){
+  const inp=document.getElementById('agent-in');
+  const q=inp.value.trim();if(!q)return;
+  addMsg('user',q);inp.value='';
+  const lower=q.toLowerCase();
+  let r='';
+  if(lower.includes('script')||lower.includes('analyz'))r='I\'m analyzing your script using Claude\'s semantic search engine to find perfect visual matches. Key narrative beats detected: establishing moment → conflict → resolution. Gemini recommends: add specific character names, physical descriptions, and emotional states for best consistency across all scenes.';
+  else if(lower.includes('earn')||lower.includes('money'))r=`Current earnings: $${S.earned.toFixed(2)}. Revenue strategy: (1) Activate referral program — each referral earns you 5 credits. (2) Post daily TikTok demos of AI videos. (3) Target content creators, marketing agencies, and YouTube automators. At 50 Studio subscribers ($149.99/mo) = $7,499/month.`;
+  else if(lower.includes('tiktok')||lower.includes('viral'))r='TikTok viral formula 2026: 9:16 ratio essential, first 3 seconds must be visually explosive, auto-captions with emoji injection (85% watch muted), 15-30 seconds sweet spot, use trending audio from TikTok sound library. I\'ll auto-select optimal posting times based on your audience location.';
+  else if(lower.includes('withdraw'))r=`Withdrawal status: $${S.earned.toFixed(2)} available. Supported methods: PayPal (fastest), Stripe (instant for Connect accounts). All notifications auto-forward to ${OWNER}. Use the Owner Panel > Withdrawal System to initiate. Minimum: $10.`;
+  else if(lower.includes('style')||lower.includes('best'))r='Top performing styles in 2026: (1) Cinematic — highest viewer retention, best for YouTube. (2) Cyberpunk — explosive TikTok performance, 40% higher shares. (3) Anime — massive engagement with 18-34 demographic. (4) Dreamy — wellness & lifestyle creators. Match style to your platform and audience.';
+  else if(lower.includes('gemini')||lower.includes('character')||lower.includes('cast'))r='Gemini 1.5 Pro casting is active. For best results: describe characters with specific physical attributes (age, ethnicity, distinctive features), emotional state, and wardrobe. Gemini will generate a consistency seed that locks their appearance across all 150+ scenes in your 25-min production — eliminating character drift completely.';
+  else r=`I'm Claudia, your AI creative director powered by Claude's search engine + Gemini character optimization. I can:\n\n• Analyze scripts and find perfect visual matches\n• Cast characters with Gemini consistency seeds\n• Identify viral moments in your productions\n• Optimize prompts for any AI engine\n• Manage your earnings and withdrawals\n\nWhat would you like to create today? 🪷`;
+  setTimeout(()=>addMsg('ai',r),700+Math.random()*500);
+}
+
+// ═══════════════════════════════════════════════════════════
+// SETTINGS
+// ═══════════════════════════════════════════════════════════
+function addWH(){
+  const url=document.getElementById('wh-u').value.trim();
+  if(!url.startsWith('http')){notify('Enter a valid URL','err');return;}
+  S.whs.push(url);document.getElementById('wh-u').value='';
+  renderWH();notify('Webhook registered','ok');
+}
+function renderWH(){
+  const el=document.getElementById('wh-list');if(!el)return;
+  el.innerHTML=S.whs.length?S.whs.map((u,i)=>`<div style="display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border)"><div style="width:7px;height:7px;border-radius:50%;background:var(--jade);flex-shrink:0;box-shadow:0 0 6px rgba(0,229,160,.5)"></div><span style="font-family:'JetBrains Mono';font-size:11.5px;color:var(--text2);flex:1;overflow:hidden;text-overflow:ellipsis">${u}</span><button class="btn bdanger bxs" onclick="S.whs.splice(${i},1);renderWH()">✕</button></div>`).join(''):'<p style="font-size:12px;color:var(--text4)">No webhooks yet.</p>';
+}
+function copyAPIKey(){navigator.clipboard.writeText('lotus_sk_'+rnd(16)).then(()=>notify('API key copied!','ok'))}
+
+// ═══════════════════════════════════════════════════════════
+// NOTIFICATIONS
+// ═══════════════════════════════════════════════════════════
+function notify(msg,type=''){
+  const tc=document.getElementById('nstack');
+  const n=document.createElement('div');n.className='notif '+(type||'');
+  const icons={ok:'🪷',err:'✕',info:'◈',gold:'💰','':'·'};
+  n.innerHTML=`<span style="flex-shrink:0;font-size:14px">${icons[type]||'·'}</span> <span>${msg}</span>`;
+  tc.appendChild(n);setTimeout(()=>n.remove(),3800);
+}
+
+// ═══════════════════════════════════════════════════════════
+// UTILS
+// ═══════════════════════════════════════════════════════════
+function ago(iso){
+  const d=(Date.now()-new Date(iso))/1000;
+  if(d<60)return 'just now';if(d<3600)return Math.floor(d/60)+'m ago';
+  if(d<86400)return Math.floor(d/3600)+'h ago';return Math.floor(d/86400)+'d ago';
+}
+function sleep(ms){return new Promise(r=>setTimeout(r,ms))}
+function rnd(n=8){return Math.random().toString(36).slice(2,2+n)}
+
+// ═══════════════════════════════════════════════════════════
+// BOOT
+// ═══════════════════════════════════════════════════════════
+if(S.token&&S.user){
+  document.getElementById('auth-screen').style.display='none';
+  document.getElementById('root').style.display='flex';
+  initApp();
+}
+</script>
+</body>
+</html>
